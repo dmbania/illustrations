@@ -1,0 +1,39 @@
+{
+    "name": "forestersfinancial/fliacillustrations",
+    "description": "FLIAC Illustrations",
+    "license": "proprietary",
+
+    "autoload": {
+        "psr-4": {
+            "ForestersFinancial\\FliacIllustrations\\": "src/"
+        }
+    },
+
+    "require": {
+        "davefx/phplot": "^6.2",
+        "doctrine/dbal": "^2.5",
+        "filp/whoops": "^2.1",
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/support": "^5.4",
+        "josegonzalez/dotenv": "^3.1",
+        "monolog/monolog": "^1.22",
+        "myclabs/php-enum": "^1.5",
+        "php-di/php-di": "^6.0",
+        "php-di/slim-bridge": "^2.0",
+        "slim/slim": "^3.8",
+        "slim/twig-view": "^2.3",
+        "twig/twig": "^2.6"
+    },
+
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.6",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpunit/phpunit": "^7.5",
+        "symfony/var-dumper": "^4.2"
+    },
+
+    "config": {
+        "github-protocols": ["https"],
+        "discard-changes": true
+    }
+}
