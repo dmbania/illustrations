@@ -1,0 +1,17 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__);
+
+return PhpCsFixer\Config::create()
+    ->setFinder($finder)
+    ->setRules([
+        '@Symfony' => true,
+        'array_syntax' => ['syntax' => 'short'],
+        'concat_space' => ['spacing' => 'one'],
+        'linebreak_after_opening_tag' => true,
+        'no_multiline_whitespace_before_semicolons' => true,
+        'ordered_imports' => true,
+        'phpdoc_order' => true,
+        'yoda_style' => false,
+    ]);
