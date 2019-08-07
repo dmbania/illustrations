@@ -1,0 +1,37 @@
+.ff-form-group {
+    margin-bottom: 2rem;
+}
+
+.ff-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.ff-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 8px 16px;
+    border: 1px solid #c1c1c1;
+    border-radius: 0;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.ff-input:not(select) {
+    -webkit-appearance: none;
+}
+
+.ff-input--inline {
+    display: inline-block;
+    width: auto;
+}
+
+.ff-input--invalid {
+    border-color: map-get($colors, error);
+}
+
+.ff-disabled {
+    color: #999999;
+}

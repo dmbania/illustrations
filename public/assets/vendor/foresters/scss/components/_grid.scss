@@ -1,0 +1,84 @@
+$grid-gutter-width: 2rem;
+
+// Grid row
+
+.ff-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width/2;
+}
+
+// Base grid column mixin
+
+@mixin grid-col {
+    flex: none;
+    width: 100%;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+}
+
+// Flexible-width column
+
+.ff-col {
+    @include grid-col;
+    flex: 1;
+}
+
+@each $prefix, $breakpoint in $breakpoints {
+    .ff-#{$prefix}-col {
+        @include grid-col;
+    }
+
+    @media (min-width: $breakpoint) {
+        .ff-#{$prefix}-col {
+            flex: 1;
+        }
+    }
+}
+
+// Proportional-width columns
+
+$grid-col-widths: (
+    "1of4": percentage(1/4),
+    "1of3": percentage(1/3),
+    "1of2": percentage(1/2),
+    "2of3": percentage(2/3),
+    "3of4": percentage(3/4),
+    full: 100%,
+);
+
+@each $name, $width in $grid-col-widths {
+    .ff-col-#{$name} {
+        @include grid-col;
+        width: $width;
+    }
+
+    @each $prefix, $breakpoint in $breakpoints {
+        .ff-#{$prefix}-col-#{$name} {
+            @include grid-col;
+        }
+
+        @media (min-width: $breakpoint) {
+            .ff-#{$prefix}-col-#{$name} {
+                width: $width;
+            }
+        }
+    }
+}
+
+// Column reordering
+
+@for $order from 1 through 4 {
+    .ff-order-#{$order} {
+        order: $order;
+    }
+
+    @each $prefix, $breakpoint in $breakpoints {
+        @media (min-width: $breakpoint) {
+            .ff-#{$prefix}-order-#{$order} {
+                order: $order;
+            }
+        }
+    }
+}

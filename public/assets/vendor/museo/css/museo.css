@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Museo Sans';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/MuseoSans_300-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_300-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_500-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/MuseoSans_300_Italic-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_300_Italic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/MuseoSans_500_Italic-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_500_Italic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Slab';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Museo_Slab_300-webfont.woff2') format('woff2'),
+         url('../fonts/Museo_Slab_300-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Slab';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/Museo_Slab_500_2-webfont.woff2') format('woff2'),
+         url('../fonts/Museo_Slab_500_2-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Slab';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/Museo_Slab_300italic-webfont.woff2') format('woff2'),
+         url('../fonts/Museo_Slab_300italic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo Slab';
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/Museo_Slab_500italic-webfont.woff2') format('woff2'),
+         url('../fonts/Museo_Slab_500italic-webfont.woff') format('woff');
+}

@@ -1,0 +1,21 @@
+// Responsive breakpoints
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+// Colors
+
+$colors: (
+    plum: #602144,
+    aqua: #00827d,
+    green: #53981f,
+    yellow: #b17e01,
+    orange: #dc5034,
+    success: #53981f,
+    warning: #b17e01,
+    error: #dc5034,
+);

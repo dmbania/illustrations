@@ -1,0 +1,154 @@
+html {
+    font-size: 62.5%; /* 10px, for easy calculations */
+}
+
+body {
+    min-width: 960px;
+    background: #ffffff;
+    color: #535353;
+    font-family: "Open Sans", Verdana, sans-serif;
+    font-size: 140%; /* 14px */
+    line-height: 1.75;
+}
+
+/* Increase font size on larger screens */
+@media only screen and (min-width: 80em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Baseline vertical spacing */
+p, h1, h2, h3, h4, h5, h6, ol, ul, dl, hr, pre, table {
+    margin-bottom: 2rem;
+}
+
+small {
+    font-size: 0.85em;
+}
+
+hr {
+    border: 1px #cccccc;
+    border-style: solid none none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HYPERLINKS
+******************************************************************************/
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* HEADINGS
+******************************************************************************/
+
+h1 {
+    color: #602144;
+    font-family: "Museo Slab", Verdana, sans-serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+h2 {
+    color: #2f9793;
+    font-family: "Museo Sans", Verdana, sans-serif;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: inherit;
+    font-family: "Museo Slab", Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4 {
+    color: inherit;
+    font-family: "Museo Sans", Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+h5 {
+    color: inherit;
+    font-family: "Museo Slab", Verdana, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+h6 {
+    color: inherit;
+    font-family: "Open Sans Light", Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+/* LISTS
+******************************************************************************/
+
+ol, ul, dd {
+    padding-left: 2rem;
+}
+
+/* TABLES
+******************************************************************************/
+
+/* Default table styles */
+
+th, td {
+    padding: 0.4rem 0.8rem;
+    vertical-align: top;
+}
+
+thead th {
+    vertical-align: bottom;
+}
+
+/* FORMS
+******************************************************************************/
+
+/* Undo Bootstrap Reboot setting labels to display: inline-block */
+label {
+    display: inline;
+}
+
+/* Remove borders and shadows from text input fields */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #e0e0e0;
+}
+
+/* Add space between inputs on consecutive lines */
+input,
+textarea,
+select {
+    margin-bottom: 1px;
+}
+
+input,
+textarea,
+select {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85em;
+}

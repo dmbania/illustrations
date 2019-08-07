@@ -1,0 +1,74 @@
+.ff-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #c1c1c1;
+    border-radius: 0;
+    background: white;
+    color: #5f6e76;
+    font-family: "Museo Sans", Verdana, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ff-button:hover {
+    background: #c1c1c1;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ff-button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    outline: 0;
+}
+
+.ff-button--primary {
+    border-color: map-get($colors, aqua);
+    color: map-get($colors, aqua);
+}
+.ff-button--primary:hover {
+    background: map-get($colors, aqua);
+}
+
+.ff-button--danger {
+    border-color: map-get($colors, orange);
+    color: map-get($colors, orange);
+}
+.ff-button--danger:hover {
+    background: map-get($colors, orange);
+}
+
+.ff-button--inverse {
+    border-color: #ffffff;
+    background: transparent;
+    color: #ffffff;
+}
+.ff-button--inverse:hover {
+    background: #ffffff;
+    color: map-get($colors, aqua);
+}
+
+.ff-button--link {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    text-decoration: underline;
+}
+
+.ff-button--link:hover {
+    background: transparent;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.ff-button--link:active {
+    box-shadow: none;
+}
+
+.ff-button--block {
+    display: block;
+    width: 100%;
+}

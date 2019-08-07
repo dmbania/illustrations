@@ -1,0 +1,15 @@
+.ff-bg-gray {
+    background: #f1f2f2;
+    color: #535353;
+}
+
+@each $name, $color in $colors {
+    .ff-fg-#{$name} {
+        color: $color;
+    }
+
+    .ff-bg-#{$name} {
+        background: $color;
+        color: #ffffff;
+    }
+}

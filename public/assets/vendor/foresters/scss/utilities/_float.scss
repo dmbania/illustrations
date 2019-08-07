@@ -1,0 +1,13 @@
+.ff-float-left {
+    float: left;
+}
+
+.ff-float-right {
+    float: right;
+}
+
+.ff-clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
