@@ -4,7 +4,7 @@
     colors="true">
 
     <testsuites>
-        <testsuite name="RepNet Test Suite">
+        <testsuite name="FLIAC Illustrations Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
