@@ -22,7 +22,7 @@ class Index
     public function __invoke(Request $request, Response $response)
     {
         //  get the current user
-        // $currentUser = $request->getAttribute('current_user');
+        $currentUser = $request->getAttribute('current_user');
 
         //  get querystring value
         // $param = $request->getQueryParam('param', [DEFAULT]);
@@ -37,7 +37,9 @@ class Index
         // return $response->withJson($json, [500]);
 
         //  Return the twig
-        $vars = [];
+        $vars = [
+            'current_user' => $currentUser,
+        ];
 
         return $this->twig->render($response, 'home/index.twig', $vars);
     }
