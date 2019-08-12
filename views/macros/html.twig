@@ -1,0 +1,7 @@
+{% macro stylesheet(path) %}
+    <link rel="stylesheet" href="{{ fingerprint(path) }}">
+{% endmacro %}
+
+{% macro script(path, module = false) %}
+    <script {% if module %}type="module" {% endif %}src="{{ fingerprint(path) }}"></script>
+{% endmacro %}
