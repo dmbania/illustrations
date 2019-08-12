@@ -47,7 +47,7 @@ return [
     // },
 
     'asset_fingerprinter' => function (ContainerInterface $container) {
-        return new AssetFingerprinter(ROOT_DIR . '/html');
+        return new AssetFingerprinter(ROOT_DIR . '/public');
     },
 
     // ErrorResponseHandler::class => function (ContainerInterface $container) {
