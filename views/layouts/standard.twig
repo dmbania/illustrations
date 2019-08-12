@@ -11,4 +11,85 @@
     {{ html.stylesheet('/assets/vendor/font-awesome/css/font-awesome.min.css') }}
     {{ html.stylesheet('/assets/vendor/foresters/css/foresters.min.css') }}
     {{ html.stylesheet('/assets/css/base.css') }}
+    {{ html.stylesheet('/assets/css/foresters-ext.css') }}
+{% endblock %}
+
+{% block body %}
+    <p class="ff-screen-reader-only"><a href="#content">Skip to main content</a></p>
+
+    <header role="banner" class="ff-bg-plum ffx-pt-1">
+        <div class="ffx-container">
+            <div class="ffx-flex ffx-items-center ff-mb-1">
+                <a href="/" class="ffx-flex ffx-items-center ffx-no-underline">
+                    <h1 class="ff-mb-0 ffx-mr-1 ffx-pr-1 ffx-br-orange-1 ffx-fg-white ffx-font-museo-slab ffx-text-xxxlarge">
+                        FLIAC<span class="ff-fg-orange">Illustrations</span>
+                    </h1>
+
+                    {# TODO: don't use inline style #}
+                    <img src="/assets/images/logos/foresters-financial-logo-plum-bg.svg" alt="Foresters Financial" style="max-width: 12rem">
+                </a>
+
+                <div class="ffx-ml-auto ff-text-small">
+                    Logged in as: <strong>current_user.getDisplayName</strong>
+                    |
+                    <a href="/user/logout" class="ff-fg-orange ffx-no-underline">Log out</a>
+                </div>
+            </div>
+
+            {% macro nav_tab(title, url, selected) %}
+                <li>
+                    <a
+                        href="{{ url }}"
+                        class="ffx-block ffx-py-half ffx-px-1 ffx-font-museo-slab ffx-text-large ffx-weight-bold ffx-no-underline {{ selected ? 'ff-bg-gray ff-fg-plum ffx-fg-plum-hover' : 'ffx-fg-white-75 ffx-fg-white-hover' }}"
+                    >
+                        {{ title }}
+                    </a>
+                </li>
+            {% endmacro %}
+
+            {% from _self import nav_tab %}
+
+            <ul class="ffx-flex ff-mb-0 ff-list-plain">
+                {{ nav_tab('Home', '/', selected_tab|default == 'home') }}
+                {{ nav_tab('Manage Agents', '/agents/', selected_tab|default == 'agents') }}
+                {{ nav_tab('Generate Illustrations', '/illustrations/', selected_tab|default == 'illustrations') }}
+            </ul>
+        </div>
+    </header>
+
+    <main role="main" id="content" class="page-content">
+        {% block main %}
+            <header class="ffx-py-1 ff-bg-gray">
+                <div class="ffx-container">
+                    <h1 class="ff-mb-0 ff-fg-aqua ffx-font-museo-slab ffx-weight-bold ffx-text-xxxlarge">\{\{ block('title') \}\}</h1>
+                </div>
+            </header>
+
+            <div class="ffx-py-1">
+                <div class="ffx-container">
+                    {% block content '' %}
+                </div>
+            </div>
+        {% endblock %}
+    </main>
+
+    <footer role="contentinfo">
+        <div class="ff-bg-plum">
+            <div class="ffx-container">
+                <a href="mailto:fliacillustrationshelp@foresters.com" class="ffx-block ffx-py-1 ffx-fg-white-75 ffx-font-museo-slab ffx-text-xlarge ffx-no-underline ff-text-center">
+                    <i class="fa fa-arrow-circle-right"></i>
+                    Need help?
+                </a>
+            </div>
+        </div>
+
+        <div class="ffx-footer ffx-py-2">
+            <div class="ffx-container ff-text-small">
+                <address class="ff-text-center">
+                    Copyright &copy; {{ 'now'|date('Y') }} Foresters Financial<br>
+                    40 Wall Street, 10<sup>th</sup> Floor, New York, NY 10005
+                </address>
+            </div>
+        </div>
+    </footer>
 {% endblock %}

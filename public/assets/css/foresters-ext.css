@@ -1,0 +1,286 @@
+/**
+ * Foresters CSS Framework Extensions
+ *
+ * At some point these should be moved into the base Foresters CSS Framework.
+ */
+
+/* Display */
+
+.ffx-block {
+    display: block;
+}
+
+.ffx-table--cell {
+    display: table-cell;
+}
+
+/* Flexbox */
+
+.ffx-flex {
+    display: flex;
+}
+
+.ffx-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ffx-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.ffx-justify-center {
+    justify-content: center;
+}
+
+.ffx-items-center {
+    align-items: center;
+}
+
+/* Widths */
+
+.ffx-max-width-1of2 {
+    max-width: 50%;
+}
+
+/* Margins */
+
+.ffx-m-neg-half {
+    margin: -1rem;
+}
+
+.ffx-m-half {
+    margin: 1rem;
+}
+
+.ffx-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ffx-my-2 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.ffx-mr-half {
+    margin-right: 1rem;
+}
+
+.ffx-mr-1 {
+    margin-right: 2rem;
+}
+
+.ffx-mb-quarter {
+    margin-bottom: 0.5rem;
+}
+
+.ffx-mb-1 {
+    margin-bottom: 2rem;
+}
+
+.ffx-ml-auto {
+    margin-left: auto;
+}
+
+.ffx-ml-half {
+    margin-left: 1rem;
+}
+
+.ffx-ml-1 {
+    margin-left: 2rem;
+}
+
+/* Padding */
+
+.ffx-p-1 {
+    padding: 2rem;
+}
+
+.ffx-p-2 {
+    padding: 4rem;
+}
+
+.ffx-py-half {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ffx-py-1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ffx-py-2 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.ffx-px-1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.ffx-pr-1 {
+    padding-right: 2rem;
+}
+
+.ffx-pt-1 {
+    padding-top: 2rem;
+}
+
+.ffx-pt-2 {
+    padding-top: 4rem;
+}
+
+.ffx-pb-1 {
+    padding-bottom: 2rem;
+}
+
+/* Border */
+
+.ffx-br-orange-1 {
+    border-right: 1px solid #dc5034;
+}
+
+.ffx-bb-gray-1 {
+    border-bottom: 1px solid #f1f2f2;
+}
+
+/* Border Radius */
+
+.ffx-rounded-1 {
+    border-radius: 0.5rem;
+}
+
+/* Box Shadow */
+
+.ffx-shadow-1 {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ffx-shadow-2 {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Container */
+
+.ffx-container {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Font Family */
+
+.ffx-font-museo-slab {
+    font-family: "Museo Slab", Verdana, sans-serif;
+}
+
+.ffx-font-museo-sans {
+    font-family: "Museo Sans", Verdana, sans-serif;
+}
+
+/* Text Size */
+
+.ffx-text-xsmall {
+    font-size: 1rem;
+}
+
+.ffx-text-large {
+    font-size: 1.5rem;
+}
+
+.ffx-text-xlarge {
+    font-size: 2rem;
+}
+
+.ffx-text-xxlarge {
+    font-size: 2.5rem;
+}
+
+.ffx-text-xxxlarge {
+    font-size: 3rem;
+}
+
+/* Font Weight */
+
+.ffx-weight-bold {
+    font-weight: bold;
+}
+
+/* Text Decoration */
+
+.ffx-no-underline,
+.ffx-no-underline:hover {
+    text-decoration: none;
+}
+
+.ffx-underline-hover:hover {
+    text-decoration: underline;
+}
+
+/* Background Colors */
+
+.ffx-bg-white {
+    background: #ffffff;
+    color: #535353;
+}
+
+/* Foreground Colors */
+
+.ffx-fg-white {
+    color: #ffffff;
+}
+
+.ffx-fg-white-hover:hover {
+    color: #ffffff;
+}
+
+.ffx-fg-white-50 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ffx-fg-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.ffx-fg-black-50 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ffx-fg-plum-hover:hover {
+    color: #602144;
+}
+
+.ffx-fg-aqua-hover:hover {
+    color: #00827d;
+}
+
+/* Buttons */
+
+.ffx-button--gray-bg {
+    background: #f1f2f2;
+}
+
+.ffx-button--gray-bg:hover {
+    background: #c1c1c1;
+}
+
+/* Lists */
+
+.ffx-list--none {
+    list-style-type: none;
+}
+
+/* Page Footer */
+
+.ffx-footer {
+    background: #6b6772;
+    color: #e6e7e8; /* TODO: check color */
+
+    /* For short pages, extend footer to bottom of viewport */
+    /* See: https://stackoverflow.com/a/18935218 */
+    box-shadow: 0 50vh 0 50vh #6b6772;
+}
