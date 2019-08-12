@@ -40,9 +40,5 @@ class Index
         $vars = [];
 
         return $this->twig->render($response, 'home/index.twig', $vars);
-
-        // Return a successful XML or JSON response
-        // return JsonResponse::success($response, $output);
-        // return XmlResponse::success($response, $output);
     }
 }
