@@ -8,3 +8,4 @@ use ForestersFinancial\FliacIllustrations\Http\Action;
 // $app->get('/user/logout', Action\User\Logout::class);
 
 $app->get('/', Action\Index::class);
+$app->get('/generate/', Action\GenerateIllustrations::class);
