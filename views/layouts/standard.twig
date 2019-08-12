@@ -1,3 +1,14 @@
 {% extends 'layouts/layout.twig' %}
 
 {% import 'macros/html.twig' as html %}
+
+{% block styles %}
+    {{ parent() }}
+
+    {{ html.stylesheet('/assets/vendor/bootstrap/css/bootstrap-reboot.min.css') }}
+    {{ html.stylesheet('/assets/vendor/open-sans/css/open-sans.css') }}
+    {{ html.stylesheet('/assets/vendor/museo/css/museo.css') }}
+    {{ html.stylesheet('/assets/vendor/font-awesome/css/font-awesome.min.css') }}
+    {{ html.stylesheet('/assets/vendor/foresters/css/foresters.min.css') }}
+    {{ html.stylesheet('/assets/css/base.css') }}
+{% endblock %}
