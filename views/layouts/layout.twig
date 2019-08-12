@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+            {% set title_block = '' %}
+            {% if block('title') is defined %}
+                {% set title_block = block('title')|trim %}
+            {% endif %}
+
+            <title>{{ title_block|striptags }}{{ title_block ? ' - ' }}ForestersConnect</title>
+
+            <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+            {% block styles '' %}
+        {% endblock %}
+    </head>
+
+    <body {% block body_tag '' %}>
+        {% block body '' %}
+
+        {% block scripts '' %}
+
+        {# {% block google_analytics_scripts %}
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31293350-8"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-31293350-8');
+            </script>
+        {% endblock %} #}
+    </body>
+</html>
