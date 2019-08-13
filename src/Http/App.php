@@ -1,6 +1,6 @@
 <?php
 
-namespace ForestersFinancial\FLiacIllustrations\Http;
+namespace ForestersFinancial\FliacIllustrations\Http;
 
 use DI\Bridge\Slim\App as SlimApp;
 use DI\ContainerBuilder;
