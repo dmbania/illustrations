@@ -69,14 +69,14 @@ class Update
         // return $response->withRedirect('/', [301/404/...]);
 
         //  Returning JSON
-        return $response->withJson($ServiceToWeb);
+        // return $response->withJson($ServiceToWeb);
 
         //  Return the twig
         // $vars = [];
         // return $this->twig->render($response, 'path/index.twig', $vars);
 
         // Return a successful XML or JSON response
-        // return JsonResponse::success($response, $output);
+        return JsonResponse::success($response, $ServiceToWeb);
         // return XmlResponse::success($response, $output);
     }
 }

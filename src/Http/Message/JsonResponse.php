@@ -1,6 +1,6 @@
 <?php
 
-namespace ForestersFinancial\RepNet\Http\Message;
+namespace ForestersFinancial\FliacIllustrations\Http\Message;
 
 use Slim\Http\Response;
 

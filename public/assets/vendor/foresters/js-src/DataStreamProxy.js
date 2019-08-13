@@ -15,8 +15,8 @@ export class DataStreamProxy {
     })
       .then(response => response.json())
       .then(result => {
-        new FormUpdater(this.form, result)
-        new SummaryUpdater(result['summary'])
+        new FormUpdater(this.form, result['payload'])
+        new SummaryUpdater(result['payload']['summary'])
       })
       .catch(err => console.error(err.toString()))
   }
