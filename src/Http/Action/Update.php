@@ -2,10 +2,10 @@
 
 namespace ForestersFinancial\FliacIllustrations\Http\Action;
 
-use ForestersFinancial\FliacIllustrations\Service\ServiceToWebDecorator;
-use ForestersFinancial\FliacIllustrations\Service\WebToServiceDecorator;
 use ForestersFinancial\FliacIllustrations\Http\Message\JsonResponse;
 use ForestersFinancial\FliacIllustrations\Http\Message\XmlResponse;
+use ForestersFinancial\FliacIllustrations\Service\ServiceToWebDecorator;
+use ForestersFinancial\FliacIllustrations\Service\WebToServiceDecorator;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Views\Twig;

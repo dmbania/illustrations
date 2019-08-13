@@ -5,7 +5,6 @@
 // use Doctrine\DBAL\Portability\Connection;
 use ForestersFinancial\FliacIllustrations\Application\AssetFingerprinter;
 use ForestersFinancial\FliacIllustrations\Application\ErrorResponseHandler;
-use ForestersFinancial\FliacIllustrations\Http\Action;
 use ForestersFinancial\FliacIllustrations\Http\Handler;
 use Monolog\Formatter\HtmlFormatter;
 use Monolog\Handler\BufferHandler;
