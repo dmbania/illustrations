@@ -4,15 +4,15 @@
 
 {% set selected_tab = 'generate' %}
 
-{% block title 'Generate Illustration' %}
+{% block title null %}
 
 {% block scripts %}
 
     {{ html.script('/assets/vendor/foresters/js/FliacIndex.js', true) }}
 {% endblock %}
 
-{% block main %}
-    <div class="ff-box ff-bg-plum ff-float-right">
+{% block content %}
+    <div class="ff-box ff-bg-plum xff-float-right ff-hidden">
         <div class="ff-box-heading">Summary</div>
         <div><span class="ff-label">Product</span> <span class="summary-product"></span></div>
         <div><span class="ff-label">Face Amount</span> <span class="summary-face-amount"></span></div>
@@ -25,10 +25,12 @@
 
     <form action="" id="illustration-form-all" class="">
         <h2>General</h2>
+
         <section>
-            <div>
-                <label>Product</label>
-                <select name="product" id="">
+            <div class="ff-row ff-form-group">
+                <label class="ff-label ff-sm-col-1of3">Product</label>
+
+                <select name="product" class="ff-input ff-sm-col-1of3">
                     <option value="ISP3-CHOICE-15">ISP3 Choice 15</option>
                     <option value="ISP3-CHOICE-WHILE-LIFE">ISP3 Choice While Life</option>
                     <option value="ISP3-CHOICE-WHILE-LIFE-EXPRESS">ISP3 Choice While Life Express</option>
@@ -36,14 +38,14 @@
                 </select>
             </div>
 
-            <div>
-                <label>Client Name</label>
-                <input type="text" name="name" class="">
+            <div class="ff-row ff-form-group">
+                <label class="ff-label ff-sm-col-1of3">Client Name</label>
+                <input type="text" name="name" class="ff-input ff-sm-col-1of3">
             </div>
 
-            <div>
-                <label>State of Issue</label>
-                <select name="state">
+            <div class="ff-row ff-form-group">
+                <label class="ff-label ff-sm-col-1of3">State of Issue</label>
+                <select name="state" class="ff-input ff-sm-col-1of3">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -98,14 +100,13 @@
                 </select>
             </div>
 
-            <div>
-                <label>Issue Age</label>
-                <input type="number" name="age" class="" min="0" max="80" value="35">
+            <div class="ff-row ff-form-group">
+                <label class="ff-label ff-sm-col-1of3">Issue Age</label>
+                <input type="number" class="ff-input ff-sm-col-1of3" name="age" min="0" max="80" value="35">
             </div>
-
         </section>
 
-        <section>
+        <section class="ff-hidden ">
           <h2>Policy Information</h2>
             <div>
                 <label>Face Amount</label>
@@ -195,7 +196,7 @@
 
         </section>
 
-        <section class="isp3-fields">
+        <section class="ff-hidden  isp3-fields">
             <h2>Riders/Benefits</h2>
 
             <div>
@@ -276,7 +277,7 @@
             </div>
         </section>
 
-        <section class="ispw-fields">
+        <section class="ff-hidden  ispw-fields">
             <h2>Riders</h2>
 
             <div>
@@ -349,7 +350,7 @@
             </div>
         </section>
 
-        <section class="ispw-fields">
+        <section class="ff-hidden  ispw-fields">
             <h2>Loan</h2>
 
             <div>
