@@ -9,3 +9,10 @@ use ForestersFinancial\FliacIllustrations\Http\Action;
 
 $app->get('/', Action\Index::class);
 $app->get('/generate/', Action\GenerateIllustrations::class);
+
+
+// $app->get('/fliac-form', Action\Fliac\Illustrations\Form::class);
+// $app->get('/fliac-index', Action\Fliac\Illustrations\Index::class);
+// $app->get('/fliac-agent', Action\Fliac\Illustrations\Agent::class);
+// $app->post('/services/fliac/pdf', Action\Fliac\Illustrations\Pdf::class);
+$app->post('/services/illustration/update', Action\Update::class);
