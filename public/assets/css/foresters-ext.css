@@ -284,3 +284,7 @@
     /* See: https://stackoverflow.com/a/18935218 */
     box-shadow: 0 50vh 0 50vh #6b6772;
 }
+
+body {
+    min-width: 0;
+}
