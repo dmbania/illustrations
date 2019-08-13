@@ -4,13 +4,13 @@
 // use Doctrine\DBAL\DriverManager;
 // use Doctrine\DBAL\Portability\Connection;
 use ForestersFinancial\FliacIllustrations\Application\AssetFingerprinter;
-// use ForestersFinancial\FICNet\Application\ErrorResponseHandler;
+use ForestersFinancial\FliacIllustrations\Application\ErrorResponseHandler;
 // use ForestersFinancial\FICNet\AssociateDirectory\DirectorySearcher;
 // use ForestersFinancial\FICNet\AssociateDirectory\LdapTree;
 // use ForestersFinancial\FICNet\BossDataProblems\BossDataRepository;
 // use ForestersFinancial\FICNet\Fam\ImaxxFundRepo;
 // use ForestersFinancial\FICNet\Http\Action;
-// use ForestersFinancial\FICNet\Http\Handler;
+use ForestersFinancial\FliacIllustrations\Http\Handler;
 // use ForestersFinancial\FICNet\IVR\CallRepository;
 // use ForestersFinancial\FICNet\RepOfficeLookup\RepOfficeRepository;
 // use ForestersFinancial\FICNet\SuggestionBox\SuggestionMailer;
@@ -33,10 +33,10 @@ use Twig\TwigFunction;
 return [
     // Slim settings and error handlers
     'settings.addContentLengthHeader' => false,
-    // 'errorHandler' => DI\get(Handler\Error::class),
-    // 'phpErrorHandler' => DI\get(Handler\Error::class),
-    // 'notFoundHandler' => DI\get(Handler\NotFound::class),
-    // 'notAllowedHandler' => DI\get(Handler\NotAllowed::class),
+    'errorHandler' => DI\get(Handler\Error::class),
+    'phpErrorHandler' => DI\get(Handler\Error::class),
+    'notFoundHandler' => DI\get(Handler\NotFound::class),
+    'notAllowedHandler' => DI\get(Handler\NotAllowed::class),
 
     //  Aliases for backward compatability until all of FICNet is
     //  converted to Slim

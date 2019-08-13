@@ -1,6 +1,6 @@
 <?php
 
-namespace ForestersFinancial\FLiacIllustrations\Http\Handler;
+namespace ForestersFinancial\FliacIllustrations\Http\Handler;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
