@@ -38,6 +38,7 @@ class GenerateIllustrations
 
         //  Return the twig
         $vars = [];
+
         return $this->twig->render($response, 'illustration/illustration.twig', $vars);
 
         // Return a successful XML or JSON response
