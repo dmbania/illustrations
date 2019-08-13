@@ -6,13 +6,18 @@
 
 {% block title 'Generate Illustration' %}
 
+{% block scripts %}
+
+    {{ html.script('/assets/vendor/foresters/js/FliacIndex.js', true) }}
+{% endblock %}
+
 {% block main %}
     <div class="ff-box ff-bg-plum ff-float-right">
         <div class="ff-box-heading">Summary</div>
-        <div><span class="ff-label">Product</span> <span class="">ISWL-2 3.50%</span></div>
-        <div><span class="ff-label">Face Amount</span> <span class="">$6,083,343.58</span></div>
-        <div><span class="ff-label">Premium</span> <span class="">$1,501.52</span></div>
-        <div><span class="ff-label">Riders</span> <span class="">of Icarus</span></div>
+        <div><span class="ff-label">Product</span> <span class="summary-product"></span></div>
+        <div><span class="ff-label">Face Amount</span> <span class="summary-face-amount"></span></div>
+        <div><span class="ff-label">Premium</span> <span class="summary-premium"></span></div>
+        <div><span class="ff-label">Riders</span> <span class="summary-riders"></span></div>
         <div>
             <button class="ff-button run-illustration-button">Run Illustration</button>
         </div>
@@ -379,6 +384,7 @@
                     </tbody>
                 </table>
             </div>
+
             <div>
                 <button>Clear Loan Balance</button>
             </div>
