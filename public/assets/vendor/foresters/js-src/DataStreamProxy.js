@@ -9,7 +9,7 @@ export class DataStreamProxy {
   }
 
   update () {
-    fetch('/services/fliac/update', {
+    fetch('/services/illustration/update', {
       method: 'POST',
       body: this.formData
     })
