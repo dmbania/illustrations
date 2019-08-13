@@ -30,7 +30,7 @@
                 </a>
 
                 <div class="ffx-ml-auto ff-text-small">
-                    Logged in as: <strong>current_user.getDisplayName</strong>
+                    Logged in as: <strong>Current User</strong>
                     |
                     <a href="/user/logout" class="ff-fg-orange ffx-no-underline">Log out</a>
                 </div>
@@ -61,7 +61,7 @@
         {% block main %}
             <header class="ffx-py-1 ff-bg-gray">
                 <div class="ffx-container">
-                    <h1 class="ff-mb-0 ff-fg-aqua ffx-font-museo-slab ffx-weight-bold ffx-text-xxxlarge">\{\{ block('title') \}\}</h1>
+                    <h1 class="ff-mb-0 ff-fg-aqua ffx-font-museo-slab ffx-weight-bold ffx-text-xxxlarge">{{ block('title') }}</h1>
                 </div>
             </header>
 
