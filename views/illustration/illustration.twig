@@ -12,384 +12,395 @@
 {% endblock %}
 
 {% block content %}
-    <div class="ff-box ff-bg-plum xff-float-right ff-hidden">
+    <div class="ff-box ff-bg-plum ff-float-right xff-hidden">
+        <ol>
+            <li>Customer Info</li>
+            <li>Policy Info</li>
+            <li>Riders/Benefits</li>
+        </ol>
+        <div class="ffx-bb-gray-1 ffx-py-1">
+            <button class="ff-button run-illustration-button">Run Illustration</button>
+        </div>
         <div class="ff-box-heading">Summary</div>
         <div><span class="ff-label">Product</span> <span class="summary-product"></span></div>
         <div><span class="ff-label">Face Amount</span> <span class="summary-face-amount"></span></div>
         <div><span class="ff-label">Premium</span> <span class="summary-premium"></span></div>
         <div><span class="ff-label">Riders</span> <span class="summary-riders"></span></div>
-        <div>
-            <button class="ff-button run-illustration-button">Run Illustration</button>
-        </div>
     </div>
 
-    <form action="" id="illustration-form-all" class="">
-        <h2>General</h2>
+    <form action="" id="illustration-form-all" class="ffx-py-1 ffx-container">
 
-        <section>
-            <div class="ff-row ff-form-group">
-                <label class="ff-label ff-sm-col-1of3">Product</label>
+                        <section>
+                        <div class="ff-row ff-box ff-bg-plum">
+                            <label class="ff-label ff-sm-col-1of3">Product</label>
 
-                <select name="product" class="ff-input ff-sm-col-1of3">
-                    <option value="ISP3-CHOICE-15">ISP3 Choice 15</option>
-                    <option value="ISP3-CHOICE-WHILE-LIFE">ISP3 Choice While Life</option>
-                    <option value="ISP3-CHOICE-WHILE-LIFE-EXPRESS">ISP3 Choice While Life Express</option>
-                    <option value="ISWL-2-3.50">ISWL-2 3.50%</option>
-                </select>
-            </div>
+                            <select name="product" class="ff-input ff-sm-col-1of3">
+                                <option value="ISP3-CHOICE-15">ISP3 Choice 15</option>
+                                <option value="ISP3-CHOICE-WHILE-LIFE">ISP3 Choice While Life</option>
+                                <option value="ISP3-CHOICE-WHILE-LIFE-EXPRESS">ISP3 Choice While Life Express</option>
+                                <option value="ISWL-2-3.50">ISWL-2 3.50%</option>
+                            </select>
+                        </div>
+                        </section>
 
-            <div class="ff-row ff-form-group">
-                <label class="ff-label ff-sm-col-1of3">Client Name</label>
-                <input type="text" name="name" class="ff-input ff-sm-col-1of3">
-            </div>
+                        <h2>1. Client Info</h2>
 
-            <div class="ff-row ff-form-group">
-                <label class="ff-label ff-sm-col-1of3">State of Issue</label>
-                <select name="state" class="ff-input ff-sm-col-1of3">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                </select>
-            </div>
-
-            <div class="ff-row ff-form-group">
-                <label class="ff-label ff-sm-col-1of3">Issue Age</label>
-                <input type="number" class="ff-input ff-sm-col-1of3" name="age" min="0" max="80" value="35">
-            </div>
-        </section>
-
-        <section class="ff-hidden ">
-          <h2>Policy Information</h2>
-            <div>
-                <label>Face Amount</label>
-                <input type="text" name="faceAmount" class="">
-
-                <label> <input name="calcFaceAmount" type="checkbox"> Calculate</label>
-
-                <label for="">Mode
-                    <select name="mode" id="">
-                        <option value="">Annual</option>
-                        <option value="">Semi-Annual</option>
-                        <option value="">Quarterly</option>
-                        <option value="">Life Line</option>
-                    </select>
-                </label>
-            </div>
-
-            <div class="isp3-fields">
-                <label>Premium</label>
-                <input type="text" name="premium" class="">
-                <label><input type="checkbox" name="calcPremium" value="calculate"> Calculate</label>
-
-                <label>Sub-standard Rating</label>
-                <select name="substdRating">
-                    <option value=""></option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="H">H</option>
-                    <option value="J">J</option>
-                    <option value="L">L</option>
-                    <option value="P">P</option>
-                </select>
-            </div>
-
-            <div class="isp3-fields">
-                <label>Premium Mode</label>
-                <select name="premMode" id="">
-                    <option value="">Annual</option>
-                    <option value="">Semi-Annual</option>
-                    <option value="">Quarterly</option>
-                    <option value="">Life Line</option>
-                </select>
-            </div>
-
-            <div class="isp3-fields">
-                <label>Fixed Account %</label>
-                <input type="text" name="fixedPct" class="">
-            </div>
-
-            <div class="ispw-fields">
-                <label>Annual Premium</label>
-                <input type="text" name="annual-premium-amount" class="">
-
-                <label><input type="checkbox" name="annual-premium-amount-calculate" value="calculate"> Calculate</label>
-
-                <label>Class</label>
-                <select name="sub-standard-rating">
-                    <option value="ST">Standard</option>
-                    <option value="PR">Preferred</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="H">H</option>
-                    <option value="J">J</option>
-                    <option value="L">L</option>
-                    <option value="P">P</option>
-                </select>
-            </div>
-
-            <div class="ispw-fields">
-                <label>Tobacco</label>
-                <label><input type="radio" name="" value="Y"> Tobacco</label><br>
-                <label><input type="radio" name="" value="N"> Non-Tobacco</label>
-            </div>
-
-            <div class="ispw-fields">
-                <label>Premium Suspend<input type="checkbox" name="">
-                </label>
-            </div>
-
-        </section>
-
-        <section class="ff-hidden  isp3-fields">
-            <h2>Riders/Benefits</h2>
-
-            <div>
-                <label>Accidental Death Benefit</label>
-                <input type="checkbox" name="accidental-death-benefit">
-
-                <label>Face</label>
-                <input type="text" name="accidental-death-benefit-face" class="">
-
-                <label><input type="checkbox" name="adbFace">
-                Keep ADB Face equal to Policy Face
-                <small>($200,000 max.)</small></label>
-            </div>
-
-            <div>
-                <label>Waiver of Premium</label>
-                <input type="checkbox" name="accidental-death-benefit">
-
-            </div>
-
-            <div>
-                <label>Insured's Term Rider</label>
-                <input type="checkbox" name="insureds-term-rider">
-
-                <label>Years</label>
-                <select name="insureds-term-rider-years">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
-
-                <label>Face</label>
-                <input type="text" name="insureds-term-rider-face" class="">
-
-                <select name="insureds-term-rider-face-multiple">
-                    <option value="">[Enter Amount]</option>
-                    <option value="1">1x Policy Face</option>
-                    <option value="2">2x Policy Face</option>
-                    <option value="3">3x Policy Face</option>
-                    <option value="4">4x Policy Face</option>
-                    <option value="5">5x Policy Face</option>
-                </select>
-            </div>
-
-            <div>
-                <label>Spouse's Term Rider</label>
-                <input type="checkbox" name="spouses-term-rider">
-
-                <label>Age</label>
-                <input type="number" name="spouses-term-rider-face" class="">
-
-                <label>Face</label>
-                <input type="text" name="spouses-term-rider-face" class="">
-
-                <label>Gender</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
-
-                <label>Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
-            </div>
-
-            <div>
-                <label>Child's Term Rider</label>
-                <input type="checkbox" name="childs-term-rider">
-
-                <label>Units</label>
-                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
-            </div>
-
-            <div>
-                <label>Guardian Insurability Rider</label>
-                <input type="checkbox" name="guardian-insurability-rider">
-
-                <label>Face</label>
-                <input type="text" name="guardian-insurability-rider-face" class="">
-            </div>
-        </section>
-
-        <section class="ff-hidden  ispw-fields">
-            <h2>Riders</h2>
-
-            <div>
-                <label>Accidental Death Benefit</label>
-                <input type="checkbox" name="accidental-death-benefit">
-
-                <label>ADB Class</label>
-                <select name="">
-                    <option value="ST">Standard</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                </select>
-            </div>
-
-            <div>
-                <label>Waiver of Premium</label>
-                <input type="checkbox" name="accidental-death-benefit">
-            </div>
-
-            <div>
-                <label>Insured's Term Rider</label>
-                <input type="checkbox" name="insureds-term-rider">
-
-                <label>Years</label>
-                <label><input type="radio" name="" value="10"> 10</label>
-                <label><input type="radio" name="" value="20"> 20</label>
+                        <section>
 
 
-                <label>Face</label>
-                <input type="text" name="insureds-term-rider-face" class="">
+                            <div class="ff-row ff-form-group">
+                                <label class="ff-label ff-sm-col-1of3">Client Name</label>
+                                <input type="text" name="name" class="ff-input ff-sm-col-1of3">
+                            </div>
 
-                <select name="insureds-term-rider-face-multiple">
-                    <option value="">[Enter Amount]</option>
-                    <option value="1">1x Policy Face</option>
-                    <option value="2">2x Policy Face</option>
-                    <option value="3">3x Policy Face</option>
-                    <option value="4">4x Policy Face</option>
-                    <option value="5">5x Policy Face</option>
-                </select>
-            </div>
+                            <div class="ff-row ff-form-group">
+                                <label class="ff-label ff-sm-col-1of3">State of Issue</label>
+                                <select name="state" class="ff-input ff-sm-col-1of3">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
 
-            <div>
-                <label>Spouse's Term Rider</label>
-                <input type="checkbox" name="spouses-term-rider">
+                            <div class="ff-row ff-form-group">
+                                <label class="ff-label ff-sm-col-1of3">Issue Age</label>
+                                <input type="number" class="ff-input ff-sm-col-1of3" name="age" min="0" max="80" value="35">
+                            </div>
+                        </section>
 
-                <label>Spouse Age</label>
-                <input type="number" name="spouses-term-rider-face" class="">
-            </div>
+                        <section>
+                          <h2>2. Policy Info</h2>
+                            <div class="ff-row ff-form-group">
+                                <label class="ff-label ff-sm-col-1of4">Face Amount</label>
+                                <input type="text" name="faceAmount" class="ff-form-input ff-sm-col-1of4">
 
-            <div>
-                <label>Spouse Gender</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
-            </div>
+                                <label class="ff-label ff-sm-col-1of4"> <input name="calcFaceAmount" type="checkbox"> Calculate</label>
 
-            <div>
-                <label>Spouse Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
-            </div>
+                                <label class="ff-label">Mode
+                                    <select name="mode" id="">
+                                        <option value="">Annual</option>
+                                        <option value="">Semi-Annual</option>
+                                        <option value="">Quarterly</option>
+                                        <option value="">Life Line</option>
+                                    </select>
+                                </label>
+                            </div>
 
-            <div>
-                <label>Child's Term Rider</label>
-                <input type="checkbox" name="childs-term-rider">
+                            <div class="ff-row ff-form-group isp3-fields">
+                                <label>Premium</label>
+                                <input type="text" name="premium" class="">
+                                <label><input type="checkbox" name="calcPremium" value="calculate"> Calculate</label>
 
-                <label>Units</label>
-                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
-            </div>
-        </section>
+                                <label>Sub-standard Rating</label>
+                                <select name="substdRating">
+                                    <option value=""></option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                    <option value="H">H</option>
+                                    <option value="J">J</option>
+                                    <option value="L">L</option>
+                                    <option value="P">P</option>
+                                </select>
+                            </div>
 
-        <section class="ff-hidden  ispw-fields">
-            <h2>Loan</h2>
+                            <div class="ff-row ff-form-group isp3-fields">
+                                <label>Premium Mode</label>
+                                <select name="premMode" id="">
+                                    <option value="">Annual</option>
+                                    <option value="">Semi-Annual</option>
+                                    <option value="">Quarterly</option>
+                                    <option value="">Life Line</option>
+                                </select>
+                            </div>
 
-            <div>
-                <label><input type="checkbox" name="loan"> Loan</label>
-            </div>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Policy Year</th>
-                            <th>Attained Age</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
+                            <div class="ff-row ff-form-group isp3-fields">
+                                <label>Fixed Account %</label>
+                                <input type="text" name="fixedPct" class="">
+                            </div>
 
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>36</td>
-                            <td><input type="text" name="" value="$0.00"></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>37</td>
-                            <td><input type="text" name="" value="$0.00"></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>38</td>
-                            <td><input type="text" name="" value="$0.00"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            <div class="ff-row ff-form-group ispw-fields">
+                                <label>Annual Premium</label>
+                                <input type="text" name="annual-premium-amount" class="">
 
-            <div>
-                <button>Clear Loan Balance</button>
-            </div>
-        </section>
+                                <label><input type="checkbox" name="annual-premium-amount-calculate" value="calculate"> Calculate</label>
 
-    </form>
+                                <label>Class</label>
+                                <select name="sub-standard-rating">
+                                    <option value="ST">Standard</option>
+                                    <option value="PR">Preferred</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                    <option value="H">H</option>
+                                    <option value="J">J</option>
+                                    <option value="L">L</option>
+                                    <option value="P">P</option>
+                                </select>
+                            </div>
+
+                            <div class="ff-row ff-form-group ispw-fields">
+                                <label class="ff-label">Tobacco</label>
+                                <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-y" value="Y"> <label class="ff-button" for="tottle-tobacco-y">Tobacco</label><br>
+                                <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-n" value="N"> <label class="ff-button" for="tottle-tobacco-n">Non-Tobacco</label>
+
+                            </div>
+
+                            <div class="ff-row ff-form-group ispw-fields">
+                                <label class="ff-label">Premium Suspend <input type="checkbox" name="suspend-premium">
+                                </label>
+                            </div>
+
+                        </section>
+
+                        <section class="ff-hidden  isp3-fields">
+                            <h2>3. Riders/Benefits</h2>
+
+                            <div>
+                                <label>Accidental Death Benefit</label>
+                                <input type="checkbox" name="accidental-death-benefit">
+
+                                <label>Face</label>
+                                <input type="text" name="accidental-death-benefit-face" class="">
+
+                                <label><input type="checkbox" name="adbFace">
+                                Keep ADB Face equal to Policy Face
+                                <small>($200,000 max.)</small></label>
+                            </div>
+
+                            <div>
+                                <label>Waiver of Premium</label>
+                                <input type="checkbox" name="accidental-death-benefit">
+
+                            </div>
+
+                            <div>
+                                <label>Insured's Term Rider</label>
+                                <input type="checkbox" name="insureds-term-rider">
+
+                                <label>Years</label>
+                                <select name="insureds-term-rider-years">
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                </select>
+
+                                <label>Face</label>
+                                <input type="text" name="insureds-term-rider-face" class="">
+
+                                <select name="insureds-term-rider-face-multiple">
+                                    <option value="">[Enter Amount]</option>
+                                    <option value="1">1x Policy Face</option>
+                                    <option value="2">2x Policy Face</option>
+                                    <option value="3">3x Policy Face</option>
+                                    <option value="4">4x Policy Face</option>
+                                    <option value="5">5x Policy Face</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Spouse's Term Rider</label>
+                                <input type="checkbox" name="spouses-term-rider">
+
+                                <label>Age</label>
+                                <input type="number" name="spouses-term-rider-face" class="">
+
+                                <label>Face</label>
+                                <input type="text" name="spouses-term-rider-face" class="">
+
+                                <label>Gender</label>
+                                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+                                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+
+                                <label>Tobacco</label>
+                                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+                                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+                            </div>
+
+                            <div>
+                                <label>Child's Term Rider</label>
+                                <input type="checkbox" name="childs-term-rider">
+
+                                <label>Units</label>
+                                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
+                            </div>
+
+                            <div>
+                                <label>Guardian Insurability Rider</label>
+                                <input type="checkbox" name="guardian-insurability-rider">
+
+                                <label>Face</label>
+                                <input type="text" name="guardian-insurability-rider-face" class="">
+                            </div>
+                        </section>
+
+                        <section class="ff-hidden  ispw-fields">
+                            <h2>3. Riders</h2>
+
+                            <div>
+                                <label>Accidental Death Benefit</label>
+                                <input type="checkbox" name="accidental-death-benefit">
+
+                                <label>ADB Class</label>
+                                <select name="">
+                                    <option value="ST">Standard</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Waiver of Premium</label>
+                                <input type="checkbox" name="accidental-death-benefit">
+                            </div>
+
+                            <div>
+                                <label>Insured's Term Rider</label>
+                                <input type="checkbox" name="insureds-term-rider">
+
+                                <label>Years</label>
+                                <label><input type="radio" name="" value="10"> 10</label>
+                                <label><input type="radio" name="" value="20"> 20</label>
+
+
+                                <label>Face</label>
+                                <input type="text" name="insureds-term-rider-face" class="">
+
+                                <select name="insureds-term-rider-face-multiple">
+                                    <option value="">[Enter Amount]</option>
+                                    <option value="1">1x Policy Face</option>
+                                    <option value="2">2x Policy Face</option>
+                                    <option value="3">3x Policy Face</option>
+                                    <option value="4">4x Policy Face</option>
+                                    <option value="5">5x Policy Face</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Spouse's Term Rider</label>
+                                <input type="checkbox" name="spouses-term-rider">
+
+                                <label>Spouse Age</label>
+                                <input type="number" name="spouses-term-rider-face" class="">
+                            </div>
+
+                            <div>
+                                <label>Spouse Gender</label>
+                                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+                                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+                            </div>
+
+                            <div>
+                                <label>Spouse Tobacco</label>
+                                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+                                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+                            </div>
+
+                            <div>
+                                <label>Child's Term Rider</label>
+                                <input type="checkbox" name="childs-term-rider">
+
+                                <label>Units</label>
+                                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
+                            </div>
+                        </section>
+
+                        <section class="ff-hidden  ispw-fields">
+                            <h2>Loan</h2>
+
+                            <div>
+                                <label><input type="checkbox" name="loan"> Loan</label>
+                            </div>
+                            <div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Policy Year</th>
+                                            <th>Attained Age</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>36</td>
+                                            <td><input type="text" name="" value="$0.00"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>37</td>
+                                            <td><input type="text" name="" value="$0.00"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>38</td>
+                                            <td><input type="text" name="" value="$0.00"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div>
+                                <button>Clear Loan Balance</button>
+                            </div>
+                        </section>
+            </form>
+
 {% endblock %}
