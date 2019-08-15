@@ -3,7 +3,7 @@ import { DataStreamProxy } from '/assets/vendor/foresters/js/DataStreamProxy.js'
 export class FliacForm {
 
     constructor(illInputForm) {
-        this.selected_product_type = 'ISP3'
+        this.setProductType()
         this.show('.isp3-info')
         this.hide('.iswl-info')
         this.initialize(illInputForm)
@@ -50,7 +50,7 @@ export class FliacForm {
         })
 
         illInputForm.querySelector('.select-product').addEventListener('change', evt => {
-            let prod_prefix = evt.target.value.substring(0, 4)
+            let prod_prefix = this.getPrefix(evt.target.value)
 
             if (this.changedProduct(prod_prefix)) {
                 switch (prod_prefix) {
@@ -102,8 +102,17 @@ export class FliacForm {
         return prod_prefix !== this.selected_product_type
     }
 
-    setProductType(prod_prefix) {
+    setProductType(prod_prefix = null) {
+        if (!prod_prefix) {
+            let product = document.querySelector('.select-product').value
+            prod_prefix = this.getPrefix(product) || 'ISP3'
+        }
+
         this.selected_product_type = prod_prefix
+    }
+
+    getPrefix(full_product_code = '') {
+        return full_product_code.substring(0, 4)
     }
 
 }
