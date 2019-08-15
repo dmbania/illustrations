@@ -3,15 +3,15 @@ import { DataStreamProxy } from '/assets/vendor/foresters/js/DataStreamProxy.js'
 export class FliacForm {
 
     constructor(illInputForm) {
-        this.setProductType()
-        this.show('.isp3-info')
-        this.hide('.iswl-info')
         this.initialize(illInputForm)
     }
 
     initialize(illInputForm) {
+        this.setProductType()
+        this.showHideSections(this.selected_product_type)
         // const allInputs = illInputForm.querySelectorAll('input[type=text], input[type=number], input[type=radio], select')
         const theForm = illInputForm.querySelectorAll('form > section')
+
 
         // allInputs.forEach(input_item => {
         //   input_item.addEventListener('change', evt => {
@@ -53,17 +53,7 @@ export class FliacForm {
             let prod_prefix = this.getPrefix(evt.target.value)
 
             if (this.changedProduct(prod_prefix)) {
-                switch (prod_prefix) {
-                    case 'ISP3':
-                        this.show('.isp3-info')
-                        this.hide('.iswl-info')
-                        break
-                    case 'ISWL':
-                        this.show('.iswl-info')
-                        this.hide('.isp3-info')
-                        break
-                }
-
+                this.showHideSections(prod_prefix)
                 this.setProductType(prod_prefix)
             }
         })
@@ -84,6 +74,19 @@ export class FliacForm {
         //     })
         // })
 
+    }
+
+    showHideSections(prod_prefix) {
+        switch (prod_prefix) {
+            case 'ISP3':
+                this.show('.isp3-info')
+                this.hide('.iswl-info')
+                break
+            case 'ISWL':
+                this.show('.iswl-info')
+                this.hide('.isp3-info')
+                break
+        }
     }
 
     hide(hide_class) {
