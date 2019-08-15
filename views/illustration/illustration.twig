@@ -404,37 +404,52 @@
 
         <!-- 3. Riders (ISWL) -->
         <section class="iswl-info ff-form-group">
-            <h2>3. Riders</h2>
-
-            <div>
-                <label>Accidental Death Benefit</label>
-                <input type="checkbox" name="accidental-death-benefit">
-
-                <label>ADB Class</label>
-                <select name="">
-                    <option value="ST">Standard</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                </select>
+            <div class="ff-row">
+                <h2 class="ff-col">3. Riders</h2>
             </div>
 
-            <div>
-                <label>Waiver of Premium</label>
-                <input type="checkbox" name="accidental-death-benefit">
+            <div class="ff-row">
+                <div class="ff-col">
+                    <label class="ff-label">
+                        <input type="checkbox" name="accidental-death-benefit">
+                        Accidental Death Benefit
+                    </label>
+
+                </div>
             </div>
 
-            <div>
-                <label>Insured's Term Rider</label>
-                <input type="checkbox" name="insureds-term-rider">
+            <div class="ff-row">
+                <div class="ff-col ffx-ml-2">
+                    <label class="ff-label">ADB Class</label>
+                    <select name="" class="ff-input ff-input--inline">
+                        <option value="ST">Standard</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
 
-                <label>Years</label>
-                <label><input type="radio" name="" value="10"> 10</label>
-                <label><input type="radio" name="" value="20"> 20</label>
+            <div class="ff-row">
+                <label class="ff-label">
+                    <input type="checkbox" name="accidental-death-benefit">
+                    Waiver of Premium
+                </label>
+            </div>
+
+            <div class="ff-row">
+                <label class="ff-label">
+                    <input type="checkbox" name="insureds-term-rider">
+                    Insured's Term Rider
+                </label>
+
+                <label class="ff-label">Years</label>
+                <label class="ff-label"><input type="radio" name="" value="10"> 10</label>
+                <label class="ff-label"><input type="radio" name="" value="20"> 20</label>
 
 
-                <label>Face</label>
+                <label class="ff-label">Face</label>
                 <input type="text" name="insureds-term-rider-face" class="">
 
                 <select name="insureds-term-rider-face-multiple">
@@ -447,34 +462,44 @@
                 </select>
             </div>
 
-            <div>
-                <label>Spouse's Term Rider</label>
-                <input type="checkbox" name="spouses-term-rider">
+            <div class="ff-row">
+                <label class="ff-label">
+                    <input type="checkbox" name="spouses-term-rider">
+                    Spouse's Term Rider
+                </label>
 
-                <label>Spouse Age</label>
+                <label class="ff-label">Spouse Age</label>
                 <input type="number" name="spouses-term-rider-face" class="">
             </div>
 
             <div>
-                <label>Spouse Gender</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
-                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+                <label class="ff-label">Spouse Gender</label>
+                <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+                <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
             </div>
 
             <div>
-                <label>Spouse Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+                <label class="ff-label">Spouse Tobacco</label>
+                <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+                <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
             </div>
 
-            <div>
-                <label>Child's Term Rider</label>
-                <input type="checkbox" name="childs-term-rider">
-
-                <label>Units</label>
-                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
+            <div class="ff-row">
+                <div class="ff-col">
+                    <label class="ff-label">
+                        <input type="checkbox" name="childs-term-rider">
+                        Child's Term Rider
+                    </label>
+                </div>
             </div>
-            </section>
+
+            <div class="ff-row">
+                <div class="ff-col">
+                    <label class="ff-label">Units</label>
+                    <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
+                </div>
+            </div>
+        </section>
 
         <!-- 4. Loans (ISWL) -->
         <section class="iswl-info ff-form-group">
