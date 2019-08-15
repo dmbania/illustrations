@@ -14,22 +14,13 @@
 {% endblock %}
 
 {% block content %}
-    <style type="text/css">
-        .ispw-info {
-            display: none;
-        }
-
-        .isp3-info {
-            display: xnone;
-        }
-    </style>
     <div class="ff-box ff-bg-plum ff-float-right xff-hidden">
         <ol>
             <li>Customer Info</li>
             <li>Policy Info</li>
             <li class="isp3-info">Riders/Benefits</li>
-            <li class="ispw-info">Riders</li>
-            <li class="ispw-info">Loans</li>
+            <li class="iswl-info">Riders</li>
+            <li class="iswl-info">Loans</li>
         </ol>
         <div class="ffx-bb-gray-1 ffx-py-1">
             <button class="ff-button run-illustration-button">Run Illustration</button>
@@ -41,17 +32,19 @@
         <div><span class="ff-label">Riders</span> <span class="summary-riders"></span></div>
     </div>
 
-    <form action="" id="illustration-form-all" class="ffx-py-1 ffx-container">
+    <form action="" id="illustration-form-all" class="ffx-py-1 ffx-container" style="margin-right: 25rem;">
         <section>
             <div class="ff-row ff-box ff-bg-plum">
-                <label class="ff-label ff-sm-col-1of3">Product</label>
+                <div class="ff-col">
+                    <label class="ff-label">Product:</label>
 
-                <select name="product" class="ff-input ff-sm-col-1of3 select-product">
-                    <option value="ISP3-CHOICE-15">ISP3 Choice 15</option>
-                    <option value="ISP3-CHOICE-WHILE-LIFE">ISP3 Choice While Life</option>
-                    <option value="ISP3-CHOICE-WHILE-LIFE-EXPRESS">ISP3 Choice While Life Express</option>
-                    <option value="ISWL-2-3.50">ISWL-2 3.50%</option>
-                </select>
+                    <select name="product" class="ff-input ff-input--inline select-product">
+                        <option value="ISP3-CHOICE-15">ISP3 Choice 15</option>
+                        <option value="ISP3-CHOICE-WHILE-LIFE">ISP3 Choice While Life</option>
+                        <option value="ISP3-CHOICE-WHILE-LIFE-EXPRESS">ISP3 Choice While Life Express</option>
+                        <option value="ISWL-2-3.50">ISWL-2 3.50%</option>
+                    </select>
+                </div>
             </div>
         </section>
 
@@ -67,9 +60,9 @@
                 </div>
 
                 <div class="ff-col-1of2">
-                    <label class="ff-label">Gender</label>
-                    <input type="radio" class="ffx-toggle" name="client-gender" id="client-gender-m" value="M"> <label class="ff-input ff-button" for="client-gender-m">Male</label>
-                    <input type="radio" class="ffx-toggle" name="client-gender" id="client-gender-f" value="F"> <label class="ff-input ff-button" for="client-gender-f">Female</label>
+                    <label class="ff-label">Gender</label><br>
+                    <input type="radio" class="" name="client-gender" id="client-gender-m" value="M"> <label class="ff-label" for="client-gender-m">Male</label>
+                    <input type="radio" class="" name="client-gender" id="client-gender-f" value="F"> <label class="ff-label" for="client-gender-f">Female</label>
                 </div>
             </div>
 
@@ -133,7 +126,7 @@
 
                 <div class="ff-col-1of2">
                     <label class="ff-label">Issue Age</label>
-                    <input type="number" class="ff-input" name="age" min="0" max="80" value="35">
+                    <input type="number" class="ff-input" name="age" min="0" max="80" value="" placeholder="35">
                 </div>
             </div>
         </section>
@@ -146,12 +139,12 @@
             <div class="ff-row">
                 <div class="ff-col-1of2">
                     <label class="ff-label">Face Amount <input type="radio" name="face-amount-or-premium" value="F"></label>
-                    <input type="text" name="face-amount" class="ff-input">
+                    <input type="text" name="face-amount" class="ff-input" placeholder="500,000.00">
                 </div>
 
                 <div class="ff-col-1of2">
                     <label class="ff-label">Premium <input type="radio" name="face-amount-or-premium" value="P"></label>
-                    <input type="text" name="premium-amount" class="ff-input">
+                    <input type="text" name="premium-amount" class="ff-input" placeholder="500,000.00">
                 </div>
             </div>
 
@@ -168,7 +161,7 @@
 
                 <div class="ff-col-1of2">
                     <label class="ff-label">Fixed Account %</label>
-                    <input type="text" name="fixed-account-percent" class="ff-input">
+                    <input type="text" name="fixed-account-percent" class="ff-input" placeholder="60.3">
                 </div>
             </div>
 
@@ -213,12 +206,18 @@
                         <input type="checkbox" name="accidental-death-benefit">
                         Accidental Death Benefit
                     </label>
+                </div>
+            </div>
 
+            <div class="ff-row">
+                <div class="ff-col ffx-ml-2">
                     <label class="ff-label">Face</label>
-                    <input type="text" name="accidental-death-benefit-face" class="">
+                    <input type="text" name="accidental-death-benefit-face" class="ff-input ff-input--inline" placeholder="1,000.00">
+                </div>
 
+                <div class="ff-col">
                     <label class="ff-label"><input type="checkbox" name="adbFace">
-                    Keep ADB Face equal to Policy Face
+                    Keep ADB Face equal to Policy Face<br>
                     <small>($200,000 max.)</small></label>
                 </div>
             </div>
@@ -244,7 +243,7 @@
             <div class="ff-row">
                 <div class="ff-col ffx-ml-2">
                     <label class="ff-label">Years</label>
-                    <select name="insureds-term-rider-years" class="ff-input">
+                    <select name="insureds-term-rider-years" class="ff-input ff-input--inline">
                         <option value="10">10</option>
                         <option value="15">15</option>
                         <option value="20">20</option>
@@ -253,11 +252,12 @@
 
                 <div class="ff-col">
                     <label class="ff-label">Face</label>
-                    <input type="text" name="insureds-term-rider-face" class="">
+                    <input type="text" name="insureds-term-rider-face" class="ff-input ff-input--inline" placeholder="1,000.00">
+                    or
                 </div>
 
                 <div class="ff-col">
-                    <select name="insureds-term-rider-face-multiple" class="">
+                    <select name="insureds-term-rider-face-multiple" class="ff-input ff-input--inline">
                         <option value="">[Enter Amount]</option>
                         <option value="1">1x Policy Face</option>
                         <option value="2">2x Policy Face</option>
@@ -280,22 +280,22 @@
             <div class="ff-row">
                 <div class="ff-col ffx-ml-2">
                     <label class="ff-label">Age</label>
-                    <input type="number" name="spouses-term-rider-face" class="ff-input--inline">
+                    <input type="number" name="spouses-term-rider-face" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
                 </div>
 
                 <div class="ff-col">
                     <label class="ff-label">Face</label>
-                    <input type="text" name="spouses-term-rider-face" class="ff-input--inline">
+                    <input type="text" name="spouses-term-rider-face" class="ff-input ff-input--inline" placeholder="1,000.00">
                 </div>
 
                 <div class="ff-col">
-                    <label class="ff-label">Gender</label>
-                    <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+                    <label class="ff-label">Gender</label><br>
                     <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+                    <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
                 </div>
 
                 <div class="ff-col">
-                    <label class="ff-label">Tobacco</label>
+                    <label class="ff-label">Tobacco</label><br>
                     <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
                     <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
                 </div>
@@ -313,7 +313,7 @@
             <div class="ff-row">
                 <div class="ff-col ffx-ml-2">
                     <label class="ff-label">Units</label>
-                    <input type="number" name="childs-term-rider-units" class="ff-input--inline" min="0" max="10">
+                    <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
                 </div>
             </div>
 
@@ -329,7 +329,7 @@
             <div class="ff-row">
                 <div class="ff-col ffx-ml-2">
                     <label class="ff-label">Face</label>
-                    <input type="text" name="guardian-insurability-rider-face" class="ff-input--inline">
+                    <input type="text" name="guardian-insurability-rider-face" class="ff-input ff-input--inline" placeholder="1,000.00">
                 </div>
             </div>
         </section>
@@ -338,7 +338,7 @@
 
 
                         <section class="ff-form-group">
-                            <div class="ff-row ff-form-group ispw-info">
+                            <div class="ff-row ff-form-group iswl-info">
                                 <label>Annual Premium</label>
                                 <input type="text" name="annual-premium-amount" class="">
 
@@ -361,21 +361,21 @@
                                 </select>
                             </div>
 
-                            <div class="ff-row ff-form-group ispw-info">
+                            <div class="ff-row ff-form-group iswl-info">
                                 <label class="ff-label">Tobacco</label>
                                 <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-y" value="Y"> <label class="ff-button" for="tottle-tobacco-y">Tobacco</label><br>
                                 <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-n" value="N"> <label class="ff-button" for="tottle-tobacco-n">Non-Tobacco</label>
 
                             </div>
 
-                            <div class="ff-row ff-form-group ispw-info">
+                            <div class="ff-row ff-form-group iswl-info">
                                 <label class="ff-label">Premium Suspend <input type="checkbox" name="suspend-premium">
                                 </label>
                             </div>
 
                         </section>
 
-                        <section class="ispw-info">
+                        <section class="iswl-info">
                             <h2>3. Riders</h2>
 
                             <div>
@@ -448,7 +448,7 @@
                             </div>
                         </section>
 
-                        <section class="ispw-info">
+                        <section class="iswl-info">
                             <h2>4. Loan</h2>
 
                             <div>
