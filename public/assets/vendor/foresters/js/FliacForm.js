@@ -44,6 +44,21 @@ export class FliacForm {
       formDiv.addEventListener('calculate', e => console.log(e.detail.text()));
     });
 
+    illInputForm.querySelector('.select-product').addEventListener('change', evt => {
+      let prod_prefix = evt.target.value.substring(0, 4);
+
+      switch (prod_prefix) {
+        case 'ISP3':
+          console.log('show ISP3');
+          console.log('hide ISWL');
+          break;
+        case 'ISWL':
+          console.log('show ISWL');
+          console.log('hide ISP3');
+          break;
+      }
+    });
+
     // illInputForm.querySelectorAll('.dollar-amount').forEach(dollarInput => {
     //     dollarInput.addEventListener('keypress', dollarIn => {
     //         let dollar_input = dollarIn.target.value
