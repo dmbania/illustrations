@@ -204,20 +204,20 @@
             </div>
 
             <div class="ff-row">
-                <div class="ff-col">
+                <div class="ff-col-1of2">
                     <label class="ff-label">Face Amount <input type="radio" name="face-amount-or-premium" value="F"></label>
                     <input type="text" name="face-amount" class="ff-input" placeholder="50,000">
                 </div>
 
-                <div class="ff-col">
-                    <label class="ff-label">Premium <input type="radio" name="face-amount-or-premium" value="P"></label>
+                <div class="ff-col-1of2">
+                    <label class="ff-label">Annual Premium <input type="radio" name="face-amount-or-premium" value="P"></label>
                     <input type="text" name="premium-amount" class="ff-input" placeholder="1,486">
                 </div>
             </div>
 
             <div class="ff-row">
                 <div class="ff-col-1of2">
-                    <label class="ff-label">Premium Mode</label>
+                    <label class="ff-label">Mode</label>
                     <select name="premium-mode" class="ff-input">
                         <option value="">Annual</option>
                         <option value="">Semi-Annual</option>
@@ -227,26 +227,10 @@
                 </div>
 
                 <div class="ff-col-1of2">
-                    <label class="ff-label">Fixed Account %</label>
-                    <input type="text" name="fixed-account-percent" class="ff-input" placeholder="0">
-                </div>
-            </div>
-
-            <div class="ff-row">
-                <div class="ff-col-1of2">
-                    <label class="ff-label">Premium Mode</label>
-                    <select name="premium-mode" class="ff-input">
-                        <option value="">Annual</option>
-                        <option value="">Semi-Annual</option>
-                        <option value="">Quarterly</option>
-                        <option value="">Life Line</option>
-                    </select>
-                </div>
-
-                <div class="ff-col-1of2">
-                    <label class="ff-label">Sub-standard Rating</label>
+                    <label class="ff-label">Class</label>
                     <select name="sub-standard-rating" class="ff-input">
-                        <option value=""></option>
+                        <option value="ST">Standard</option>
+                        <option value="PR">Preferred</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -258,6 +242,22 @@
                         <option value="L">L</option>
                         <option value="P">P</option>
                     </select>
+                </div>
+            </div>
+
+            <div class="ff-row">
+                <div class="ff-col-1of2">
+                    <label class="ff-label">
+                        <input type="checkbox" name="suspend-premium">
+                        Premium Suspend
+                    </label>
+                </div>
+
+                <div class="ff-col-1of2">
+                    <label class="ff-label">Tobacco</label><br>
+                    <input type="radio" class="" name="tobacco-use" id="tottle-tobacco-y" value="Y"> <label class="ff-label" for="tottle-tobacco-y">Tobacco</label>
+                    <input type="radio" class="" name="tobacco-use" id="tottle-tobacco-n" value="N"> <label class="ff-label" for="tottle-tobacco-n">Non-Tobacco</label>
+
                 </div>
             </div>
         </section>
@@ -403,158 +403,119 @@
         </section>
 
         <!-- 3. Riders (ISWL) -->
+        <section class="iswl-info ff-form-group">
+            <h2>3. Riders</h2>
+
+            <div>
+                <label>Accidental Death Benefit</label>
+                <input type="checkbox" name="accidental-death-benefit">
+
+                <label>ADB Class</label>
+                <select name="">
+                    <option value="ST">Standard</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Waiver of Premium</label>
+                <input type="checkbox" name="accidental-death-benefit">
+            </div>
+
+            <div>
+                <label>Insured's Term Rider</label>
+                <input type="checkbox" name="insureds-term-rider">
+
+                <label>Years</label>
+                <label><input type="radio" name="" value="10"> 10</label>
+                <label><input type="radio" name="" value="20"> 20</label>
+
+
+                <label>Face</label>
+                <input type="text" name="insureds-term-rider-face" class="">
+
+                <select name="insureds-term-rider-face-multiple">
+                    <option value="">[Enter Amount]</option>
+                    <option value="1">1x Policy Face</option>
+                    <option value="2">2x Policy Face</option>
+                    <option value="3">3x Policy Face</option>
+                    <option value="4">4x Policy Face</option>
+                    <option value="5">5x Policy Face</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Spouse's Term Rider</label>
+                <input type="checkbox" name="spouses-term-rider">
+
+                <label>Spouse Age</label>
+                <input type="number" name="spouses-term-rider-face" class="">
+            </div>
+
+            <div>
+                <label>Spouse Gender</label>
+                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+            </div>
+
+            <div>
+                <label>Spouse Tobacco</label>
+                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+            </div>
+
+            <div>
+                <label>Child's Term Rider</label>
+                <input type="checkbox" name="childs-term-rider">
+
+                <label>Units</label>
+                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
+            </div>
+            </section>
+
         <!-- 4. Loans (ISWL) -->
+        <section class="iswl-info ff-form-group">
+            <h2>4. Loan</h2>
 
-                        <section class="ff-form-group">
-                            <div class="ff-row ff-form-group iswl-info">
-                                <label>Annual Premium</label>
-                                <input type="text" name="annual-premium-amount" class="">
+            <div>
+                <label><input type="checkbox" name="loan"> Loan</label>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Policy Year</th>
+                            <th>Attained Age</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
 
-                                <label><input type="checkbox" name="annual-premium-amount-calculate" value="calculate"> Calculate</label>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>36</td>
+                            <td><input type="text" name="" value="$0.00"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>37</td>
+                            <td><input type="text" name="" value="$0.00"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>38</td>
+                            <td><input type="text" name="" value="$0.00"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                                <label>Class</label>
-                                <select name="sub-standard-rating">
-                                    <option value="ST">Standard</option>
-                                    <option value="PR">Preferred</option>
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="F">F</option>
-                                    <option value="H">H</option>
-                                    <option value="J">J</option>
-                                    <option value="L">L</option>
-                                    <option value="P">P</option>
-                                </select>
-                            </div>
-
-                            <div class="ff-row ff-form-group iswl-info">
-                                <label class="ff-label">Tobacco</label>
-                                <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-y" value="Y"> <label class="ff-button" for="tottle-tobacco-y">Tobacco</label><br>
-                                <input type="radio" class="ffx-toggle" name="tobacco-use" id="tottle-tobacco-n" value="N"> <label class="ff-button" for="tottle-tobacco-n">Non-Tobacco</label>
-
-                            </div>
-
-                            <div class="ff-row ff-form-group iswl-info">
-                                <label class="ff-label">Premium Suspend <input type="checkbox" name="suspend-premium">
-                                </label>
-                            </div>
-
-                        </section>
-
-                        <section class="iswl-info">
-                            <h2>3. Riders</h2>
-
-                            <div>
-                                <label>Accidental Death Benefit</label>
-                                <input type="checkbox" name="accidental-death-benefit">
-
-                                <label>ADB Class</label>
-                                <select name="">
-                                    <option value="ST">Standard</option>
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
-                                    <option value="D">D</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label>Waiver of Premium</label>
-                                <input type="checkbox" name="accidental-death-benefit">
-                            </div>
-
-                            <div>
-                                <label>Insured's Term Rider</label>
-                                <input type="checkbox" name="insureds-term-rider">
-
-                                <label>Years</label>
-                                <label><input type="radio" name="" value="10"> 10</label>
-                                <label><input type="radio" name="" value="20"> 20</label>
-
-
-                                <label>Face</label>
-                                <input type="text" name="insureds-term-rider-face" class="">
-
-                                <select name="insureds-term-rider-face-multiple">
-                                    <option value="">[Enter Amount]</option>
-                                    <option value="1">1x Policy Face</option>
-                                    <option value="2">2x Policy Face</option>
-                                    <option value="3">3x Policy Face</option>
-                                    <option value="4">4x Policy Face</option>
-                                    <option value="5">5x Policy Face</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label>Spouse's Term Rider</label>
-                                <input type="checkbox" name="spouses-term-rider">
-
-                                <label>Spouse Age</label>
-                                <input type="number" name="spouses-term-rider-face" class="">
-                            </div>
-
-                            <div>
-                                <label>Spouse Gender</label>
-                                <label><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
-                                <label><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
-                            </div>
-
-                            <div>
-                                <label>Spouse Tobacco</label>
-                                <label><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-                                <label><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
-                            </div>
-
-                            <div>
-                                <label>Child's Term Rider</label>
-                                <input type="checkbox" name="childs-term-rider">
-
-                                <label>Units</label>
-                                <input type="number" name="childs-term-rider-units" class="" min="0" max="10">
-                            </div>
-                        </section>
-
-                        <section class="iswl-info">
-                            <h2>4. Loan</h2>
-
-                            <div>
-                                <label><input type="checkbox" name="loan"> Loan</label>
-                            </div>
-                            <div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Policy Year</th>
-                                            <th>Attained Age</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>36</td>
-                                            <td><input type="text" name="" value="$0.00"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>37</td>
-                                            <td><input type="text" name="" value="$0.00"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>38</td>
-                                            <td><input type="text" name="" value="$0.00"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div>
-                                <button>Clear Loan Balance</button>
-                            </div>
-                        </section>
+            <div>
+                <button>Clear Loan Balance</button>
+            </div>
+        </section>
     </form>
 {% endblock %}
