@@ -6,13 +6,13 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="loan">
+                <input type="checkbox" name="loan" value="Y" class="loan-checkbox">
                 Loan
             </label>
         </div>
     </div>
 
-    <div class="ff-row">
+    <div class="ff-row loan-info">
         <div class="ff-col">
             <table class="ff-table">
                 <thead>
@@ -27,24 +27,24 @@
                     <tr>
                         <td>1</td>
                         <td>36</td>
-                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                        <td><input type="text" name="loan_amount[1]" value="$0.00" class="ff-input"></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>37</td>
-                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                        <td><input type="text" name="loan_amount[2]" value="$0.00" class="ff-input"></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>38</td>
-                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                        <td><input type="text" name="loan_amount[3]" value="$0.00" class="ff-input"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <div class="ff-row">
+    <div class="ff-row loan-info">
         <div class="ff-col">
             <button class="ff-button ff-button--danger">Clear Loan Balance</button>
         </div>
