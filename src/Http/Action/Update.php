@@ -3,12 +3,10 @@
 namespace ForestersFinancial\FliacIllustrations\Http\Action;
 
 use ForestersFinancial\FliacIllustrations\Http\Message\JsonResponse;
-use ForestersFinancial\FliacIllustrations\Http\Message\XmlResponse;
 use ForestersFinancial\FliacIllustrations\Service\ServiceToWebDecorator;
 use ForestersFinancial\FliacIllustrations\Service\WebToServiceDecorator;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Views\Twig;
 
 class Update
 {
@@ -18,9 +16,8 @@ class Update
     // private $var;
 
     //  Add your Dependency Injections here.
-    public function __construct(Twig $twig)
+    public function __construct()
     {
-        $this->twig = $twig;
         $this->products = [
             'ISP3 Choice 15',
             'ISP3 Choice While Life Express',
