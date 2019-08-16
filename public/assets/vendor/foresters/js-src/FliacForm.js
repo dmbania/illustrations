@@ -9,9 +9,12 @@ export class FliacForm {
     initialize(illInputForm) {
         this.setProductType()
         this.showHideSections(this.selected_product_type)
-        // const allInputs = illInputForm.querySelectorAll('input[type=text], input[type=number], input[type=radio], select')
-        const theForm = illInputForm.querySelectorAll('form > section')
 
+        document.querySelector('.illustration-form').addEventListener('submit', evt => {
+            evt.preventDefault()
+        })
+
+        const formSections = illInputForm.querySelectorAll('form > section')
 
         // allInputs.forEach(input_item => {
         //   input_item.addEventListener('change', evt => {
@@ -21,7 +24,7 @@ export class FliacForm {
         //     dataStream.update()
         //   })
         // })
-        theForm.forEach(input_item => {
+        formSections.forEach(input_item => {
             input_item.addEventListener('change', evt => {
                 const val = evt.target.value
 
@@ -58,6 +61,10 @@ export class FliacForm {
             }
         })
 
+        // illInputForm.querySelector('.loan-checkbox').addEventListener('change', evt => {
+
+        //     evt.target.checked
+        // })
         // illInputForm.querySelectorAll('.dollar-amount').forEach(dollarInput => {
         //     dollarInput.addEventListener('keypress', dollarIn => {
         //         let dollar_input = dollarIn.target.value
