@@ -9,22 +9,22 @@
 {% block scripts %}
 
     {{ html.script('/assets/vendor/foresters/js/FliacIndex.js', true) }}
-
-
 {% endblock %}
 
 {% block content %}
     <div class="ff-box ff-bg-plum ff-float-right xff-hidden">
         <ol>
-            <li>Customer Info</li>
-            <li>Policy Info</li>
-            <li class="isp3-info">Riders/Benefits</li>
-            <li class="iswl-info">Riders</li>
-            <li class="iswl-info">Loans</li>
+            <li><a href="#customer-info">Customer Info</a></li>
+            <li><a href="#policy-info">Policy Info</a></li>
+            <li class="isp3-info"><a href="#riders-benefits">Riders/Benefits</a></li>
+            <li class="iswl-info"><a href="#riders">Riders</a></li>
+            <li class="iswl-info"><a href="#loans">Loans</a></li>
         </ol>
+
         <div class="ffx-bb-gray-1 ffx-py-1">
             <button class="ff-button run-illustration-button">Run Illustration</button>
         </div>
+
         <div class="ff-box-heading">Summary</div>
         <div><span class="ff-label">Product</span> <span class="summary-product"></span></div>
         <div><span class="ff-label">Face Amount</span> <span class="summary-face-amount"></span></div>
@@ -51,7 +51,7 @@
         <!-- 1. Client Info -->
         <section class="ff-form-group">
             <div class="ff-row">
-                <h2 class="ff-col">1. Client Info</h2>
+                <h2 class="ff-col" id="customer-info">1. Client Info</h2>
             </div>
 
             <div class="ff-row">
@@ -135,7 +135,7 @@
         <!-- 2. Policy Info (ISP3) -->
         <section class="isp3-info ff-form-group">
             <div class="ff-row">
-                <h2 class="ff-col">2. Policy Info</h2>
+                <h2 class="ff-col" id="policy-info">2. Policy Info</h2>
             </div>
 
             <div class="ff-row">
@@ -200,7 +200,7 @@
         <!-- 2. Policy Info (ISWL) -->
         <section class="iswl-info off-form-group">
             <div class="ff-row">
-                <h2 class="ff-col">2. Policy Info</h2>
+                <h2 class="ff-col" id="policy-info">2. Policy Info</h2>
             </div>
 
             <div class="ff-row">
@@ -265,7 +265,7 @@
         <!-- 3. Riders/Benefits (ISP3) -->
         <section class="isp3-info ff-form-group">
             <div class="ff-row">
-                <h2 class="ff-col">3. Riders/Benefits</h2>
+                <h2 class="ff-col" id="riders-benefits">3. Riders/Benefits</h2>
             </div>
 
             <div class="ff-row">
@@ -405,7 +405,7 @@
         <!-- 3. Riders (ISWL) -->
         <section class="iswl-info ff-form-group">
             <div class="ff-row">
-                <h2 class="ff-col">3. Riders</h2>
+                <h2 class="ff-col" id="riders">3. Riders</h2>
             </div>
 
             <div class="ff-row">
@@ -508,48 +508,59 @@
                     <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
                 </div>
             </div>
-
         </section>
 
         <!-- 4. Loans (ISWL) -->
         <section class="iswl-info ff-form-group">
-            <h2>4. Loan</h2>
-
-            <div>
-                <label><input type="checkbox" name="loan"> Loan</label>
-            </div>
-            <div>
-                <table class="ff-table">
-                    <thead>
-                        <tr>
-                            <th>Policy Year</th>
-                            <th>Attained Age</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>36</td>
-                            <td><input type="text" name="" value="$0.00" class="ff-input"></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>37</td>
-                            <td><input type="text" name="" value="$0.00" class="ff-input"></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>38</td>
-                            <td><input type="text" name="" value="$0.00" class="ff-input"></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="ff-row">
+                <h2 class="ff-col" id="loans">4. Loan</h2>
             </div>
 
-            <div>
-                <button class="ff-button ff-button--danger">Clear Loan Balance</button>
+            <div class="ff-row">
+                <div class="ff-col">
+                    <label class="ff-label">
+                        <input type="checkbox" name="loan">
+                        Loan
+                    </label>
+                </div>
+            </div>
+
+            <div class="ff-row">
+                <div class="ff-col">
+                    <table class="ff-table">
+                        <thead>
+                            <tr>
+                                <th>Policy Year</th>
+                                <th>Attained Age</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>36</td>
+                                <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>37</td>
+                                <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>38</td>
+                                <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ff-row">
+                <div class="ff-col">
+                    <button class="ff-button ff-button--danger">Clear Loan Balance</button>
+                </div>
             </div>
         </section>
     </form>
