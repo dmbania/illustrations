@@ -16,7 +16,7 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">ADB Class</label>
-            <select name="" class="ff-input ff-input--inline">
+            <select name="accidental-death-benefit-class" class="ff-input ff-input--inline">
                 <option value="ST">Standard</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
@@ -29,7 +29,7 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="accidental-death-benefit">
+                <input type="checkbox" name="waiver-of-premium">
                 Waiver of Premium
             </label>
         </div>
@@ -38,18 +38,18 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Years</label>
-            <label class="ff-label"><input type="radio" name="waiver-premium-years" value="10"> 10</label>
-            <label class="ff-label"><input type="radio" name="waiver-premium-years" value="20"> 20</label>
+            <label class="ff-label"><input type="radio" name="waiver-of-premium-years" value="10"> 10</label>
+            <label class="ff-label"><input type="radio" name="waiver-of-premium-years" value="20"> 20</label>
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Face</label>
-            <input type="text" name="insureds-term-rider-face" class="ff-input ff-input--inline" placeholder="200,00">
+            <input type="text" name="waiver-of-premium-face" class="ff-input ff-input--inline" placeholder="200,00">
             or
         </div>
 
         <div class="ff-col">
-            <select name="insureds-term-rider-face-multiple" class="ff-input ff-input--inline">
+            <select name="waiver-of-premium-face-multiple" class="ff-input ff-input--inline">
                 <option value="">[Enter Amount]</option>
                 <option value="1">1x Policy Face</option>
                 <option value="2">2x Policy Face</option>
@@ -63,7 +63,7 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="spouses-term-rider">
+                <input type="checkbox" name="spouses-term">
                 Spouse's Term Rider
             </label>
         </div>
@@ -72,26 +72,26 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Spouse Age</label>
-            <input type="number" name="spouses-term-rider-face" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
+            <input type="number" name="spouses-term-age" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Spouse Gender</label><br>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-gender" value="M"> Male</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-gender" value="F"> Female</label>
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Spouse Tobacco</label><br>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-tobacco" value="N"> Non-Tobacco</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-tobacco" value="Y"> Tobacco</label>
         </div>
     </div>
 
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="childs-term-rider">
+                <input type="checkbox" name="childs-term">
                 Child's Term Rider
             </label>
         </div>
@@ -100,7 +100,7 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Units</label>
-            <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
+            <input type="number" name="childs-term-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
         </div>
     </div>
 </section>

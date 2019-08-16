@@ -19,7 +19,7 @@
         </div>
 
         <div class="ff-col">
-            <label class="ff-label"><input type="checkbox" name="adbFace">
+            <label class="ff-label"><input type="checkbox" name="accidental-death-benefit-keep-equal">
             Keep ADB Face equal to Policy Face<br>
             <small>($200,000 max.)</small></label>
         </div>
@@ -28,7 +28,7 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="accidental-death-benefit">
+                <input type="checkbox" name="waiver-of-premium">
                 Waiver of Premium
             </label>
         </div>
@@ -37,7 +37,7 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="insureds-term-rider">
+                <input type="checkbox" name="insureds-term">
                 Insured's Term Rider
             </label>
         </div>
@@ -46,7 +46,7 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Years</label>
-            <select name="insureds-term-rider-years" class="ff-input ff-input--inline">
+            <select name="insureds-term-years" class="ff-input ff-input--inline">
                 <option value="10">10</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
@@ -55,12 +55,12 @@
 
         <div class="ff-col">
             <label class="ff-label">Face</label>
-            <input type="text" name="insureds-term-rider-face" class="ff-input ff-input--inline" placeholder="200,00">
+            <input type="text" name="insureds-term-face" class="ff-input ff-input--inline" placeholder="200,00">
             or
         </div>
 
         <div class="ff-col">
-            <select name="insureds-term-rider-face-multiple" class="ff-input ff-input--inline">
+            <select name="insureds-term-face-multiple" class="ff-input ff-input--inline">
                 <option value="">[Enter Amount]</option>
                 <option value="1">1x Policy Face</option>
                 <option value="2">2x Policy Face</option>
@@ -74,7 +74,7 @@
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="spouses-term-rider">
+                <input type="checkbox" name="spouses-term">
                 Spouse's Term Rider
             </label>
         </div>
@@ -83,31 +83,31 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Age</label>
-            <input type="number" name="spouses-term-rider-face" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
+            <input type="number" name="spouses-term-age" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Face</label>
-            <input type="text" name="spouses-term-rider-face" class="ff-input ff-input--inline" placeholder="200,000">
+            <input type="text" name="spouses-term-face" class="ff-input ff-input--inline" placeholder="200,000">
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Gender</label><br>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-gender" value="M"> Male</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-gender" value="F"> Female</label>
         </div>
 
         <div class="ff-col">
             <label class="ff-label">Tobacco</label><br>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
-            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-tobacco" value="N"> Non-Tobacco</label>
+            <label class="ff-label"><input type="radio" name="spouses-term-tobacco" value="Y"> Tobacco</label>
         </div>
     </div>
 
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="childs-term-rider">
+                <input type="checkbox" name="childs-term">
                 Child's Term Rider
             </label>
         </div>
@@ -116,14 +116,14 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Units</label>
-            <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
+            <input type="number" name="childs-term-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
         </div>
     </div>
 
     <div class="ff-row">
         <div class="ff-col">
             <label class="ff-label">
-                <input type="checkbox" name="guardian-insurability-rider">
+                <input type="checkbox" name="guardian-insurability">
                 Guardian Insurability Rider
             </label>
         </div>
@@ -132,7 +132,7 @@
     <div class="ff-row">
         <div class="ff-col ffx-ml-2">
             <label class="ff-label">Face</label>
-            <input type="text" name="guardian-insurability-rider-face" class="ff-input ff-input--inline" placeholder="25,000">
+            <input type="text" name="guardian-insurability-face" class="ff-input ff-input--inline" placeholder="25,000">
         </div>
     </div>
 </section>
