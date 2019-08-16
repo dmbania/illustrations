@@ -348,3 +348,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
+.ffx-box--sticky {
+    position: sticky;
+    top: 1rem;
+    right: 1rem;
+}

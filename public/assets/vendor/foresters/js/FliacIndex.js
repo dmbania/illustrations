@@ -1,7 +1,7 @@
 import { FliacForm } from '/assets/vendor/foresters/js/FliacForm.js';
 import { RunIllustrationButton } from '/assets/vendor/foresters/js/RunIllustrationButton.js';
 
-const fliac_form = document.querySelector('#illustration-form-all');
+const fliac_form = document.querySelector('.illustration-form');
 const IllustrationForm = new FliacForm(fliac_form);
 
 const run_button = document.querySelector('.run-illustration-button');

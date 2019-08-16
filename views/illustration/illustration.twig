@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="ff-box ff-bg-plum ff-float-right">
+    <div class="ff-bg-plum ff-float-right ff-md-col-1of4 ff-box ffx-box--sticky">
         <ol>
             <li><a href="#customer-info">Customer Info</a></li>
             <li><a href="#policy-info">Policy Info</a></li>
@@ -26,13 +26,15 @@
         </div>
 
         <div class="ff-box-heading">Summary</div>
-        <div><span class="ff-label">Product</span> <span class="summary-product"></span></div>
-        <div><span class="ff-label">Face Amount</span> <span class="summary-face-amount"></span></div>
-        <div><span class="ff-label">Premium</span> <span class="summary-premium"></span></div>
-        <div><span class="ff-label">Riders</span> <span class="summary-riders"></span></div>
+        <div>
+            <span class="ff-label">Product:</span> <span class="summary-product"></span>;
+            <span class="ff-label">Face Amount:</span> <span class="summary-face-amount"></span>;
+            <span class="ff-label">Premium:</span> <span class="summary-premium"></span>;
+            <span class="ff-label">Riders:</span> <span class="summary-riders"></span>
+        </div>
     </div>
 
-    <form action="" id="illustration-form-all" class="ffx-py-1 ffx-container" style="margin-right: 25rem;">
+    <form action="" class="ffx-py-1 ffx-container illustration-form" style="margin-right: 25rem;">
         <section>
             <div class="ff-row ff-box ff-bg-plum">
                 <div class="ff-col">
