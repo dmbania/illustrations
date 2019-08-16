@@ -43,14 +43,17 @@ class Update
         //  get the current user
         // $currentUser = $request->getAttribute('current_user');
 
-        //  get querystring value
-        // $param = $request->getQueryParam('param', [DEFAULT]);
-
-        //  get POST value
-        // $postParam = $request->getParsedBodyParam('post_param', [DEFAULT]);
+        //  get POST values
         $post = $request->getParsedBody();
 
         $WebToService = (new WebToServiceDecorator($post))->get();
+
+        // NOTE:
+        //
+        // There should be some code here which will call the Steve service with the WebToService
+        // data above, and pass the results to the next line to be mapped back to what we neeed
+        // for the web form.
+
         $ServiceToWeb = (new ServiceToWebDecorator($WebToService))->get();
 
         shuffle($this->products);
@@ -77,6 +80,5 @@ class Update
 
         // Return a successful XML or JSON response
         return JsonResponse::success($response, $ServiceToWeb);
-        // return XmlResponse::success($response, $output);
     }
 }
