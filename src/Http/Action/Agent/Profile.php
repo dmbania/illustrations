@@ -38,6 +38,7 @@ class Profile
 
         //  Return the twig
         $vars = [];
+
         return $this->twig->render($response, 'agent/profile.twig', $vars);
 
         // Return a successful XML or JSON response
