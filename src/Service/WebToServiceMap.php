@@ -11,7 +11,6 @@ class WebToServiceMap
         'accidental-death-benefit-keep-equal' => 'adb_equalface',
         'allYears' => 'allyears', // no match
         'calcFaceAmount' => 'calc_face_amount', // no match
-        'calcPremium' => 'calc_premium', // no match
         'childs-term' => 'child_rider',
         'childs-term-units' => 'child_units',
         'client-age' => 'age',
@@ -41,7 +40,7 @@ class WebToServiceMap
         'policy-sub-standard-rating' => 'substd_rating',
         'policy-suspend-premium' => '',
         'policy-tobacco-use' => '',
-        'premium' => 'premium',
+        'premium' => 'calc_premium',
         'product' => 'product',
         'spouses-term' => 'spouse_rider',
         'spouses-term-age' => 'spouse_age',
