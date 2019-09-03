@@ -6,7 +6,7 @@
 
 {% block scripts %}
 
-    {# {{ html.script('/assets/vendor/foresters/js/AgentProfile.js', true) }} #}
+    {{ html.script('/assets/vendor/foresters/js/AgentIndex.js', true) }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
         <section class="ff-form-group">
             <div class="ff-row">
                 <div class="ff-col">
-                    <label class="ff-label" for="agent-name">Name</label> <span class="ff-required">required</span>
+                    <label class="ff-label" for="agent-name">Name</label> <span class="ffx-required">required</span>
                     <input type="text" name="agent-name" id="agent-name" class="ff-input">
                 </div>
             </div>

@@ -358,3 +358,12 @@ input[type=number] {
 html {
   scroll-behavior: smooth;
 }
+
+.ffx-required {
+    font-variant-position: super;
+    color: red;
+}
+
+.ffx-required:before {
+    content: '*'
+}
