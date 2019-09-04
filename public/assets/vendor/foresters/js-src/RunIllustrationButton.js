@@ -1,4 +1,3 @@
-import { FormCollector } from '/assets/vendor/foresters/js/FormCollector.js'
 import { DataStreamProxy } from '/assets/vendor/foresters/js/DataStreamProxy.js'
 
 export class RunIllustrationButton {
