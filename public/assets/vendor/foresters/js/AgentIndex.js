@@ -1,3 +1,14 @@
-import { AgentProfile } from '/assets/vendor/foresters/js/AgentProfile.js';
+import { AgentProfileManager } from '/assets/vendor/foresters/js/AgentProfileManager.js';
 
-AP = new AgentProfile();
+const agentStorage = window.localStorage;
+const APM = new AgentProfileManager(agentStorage);
+
+let newAgent = {
+    name: 'David Bania',
+    company: 'Company'
+};
+
+APM.addAgent(newAgent);
+APM.clear();
+
+APM.showAgents();
