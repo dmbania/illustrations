@@ -10,7 +10,6 @@ export class AgentProfileManager {
         } catch (err) {
             console.error(err)
         }
-
     }
 
     showAgents() {
