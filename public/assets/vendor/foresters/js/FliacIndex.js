@@ -1,8 +1,11 @@
-import { FliacForm } from '/assets/vendor/foresters/js/FliacForm.js';
-import { RunIllustrationButton } from '/assets/vendor/foresters/js/RunIllustrationButton.js';
+'use strict';
 
-const fliac_form = document.querySelector('.illustration-form');
-const IllustrationForm = new FliacForm(fliac_form);
+var _FliacForm = require('/assets/vendor/foresters/js/FliacForm.js');
 
-const run_button = document.querySelector('.run-illustration-button');
-const RunButton = new RunIllustrationButton(run_button, fliac_form);
+var _RunIllustrationButton = require('/assets/vendor/foresters/js/RunIllustrationButton.js');
+
+var fliac_form = document.querySelector('.illustration-form');
+var IllustrationForm = new _FliacForm.FliacForm(fliac_form);
+
+var run_button = document.querySelector('.run-illustration-button');
+var RunButton = new _RunIllustrationButton.RunIllustrationButton(run_button, fliac_form);
