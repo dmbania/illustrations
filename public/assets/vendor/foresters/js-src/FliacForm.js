@@ -9,6 +9,7 @@ export class FliacForm {
     initialize(illInputForm) {
         this.setProductType()
         this.showHideSections(this.selected_product_type)
+        this.disableEnableControls()
 
         document.querySelector('.illustration-form').addEventListener('submit', evt => {
             evt.preventDefault()
@@ -61,6 +62,9 @@ export class FliacForm {
             }
         })
 
+        const defaultData = new DataStreamProxy(illInputForm)
+        defaultData.update()
+
         // illInputForm.querySelector('.loan-checkbox').addEventListener('change', evt => {
 
         //     evt.target.checked
@@ -96,15 +100,35 @@ export class FliacForm {
         }
     }
 
+    disableEnableControls() {
+        switch (this.selected_product_type) {
+            case 'ISP3-CHOICE-15':
+                break;
+            case 'ISP3-CHOICE-WHILE-LIFE':
+                break;
+            case 'ISP3-CHOICE-WHILE-LIFE-EXPRESS':
+                break;
+            case 'ISWL-2-3.50':
+                break;
+            default:
+        }
+    }
+
     hide(hide_class) {
         document.querySelectorAll(hide_class).forEach(ele => {
             ele.classList.add('ff-hidden')
+            // ele.querySelectorAll('input').forEach(input => {
+            //     input.disabled = true
+            // })
         })
     }
 
     show(show_class) {
         document.querySelectorAll(show_class).forEach(ele => {
             ele.classList.remove('ff-hidden')
+            // ele.querySelectorAll('input').forEach(input => {
+            //     input.disabled = false
+            // })
         })
     }
 
