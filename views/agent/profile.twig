@@ -6,7 +6,7 @@
 
 {% block scripts %}
 
-    {{ html.script('/assets/vendor/foresters/js/AgentIndex.js', true) }}
+    {{ html.script('/assets/vendor/foresters/js/AgentProfileIndex.js', true) }}
 {% endblock %}
 
 {% block content %}
@@ -16,6 +16,7 @@
                 <div class="ff-col">
                     <label class="ff-label" for="agent-name">Name</label> <span class="ffx-required">required</span>
                     <input type="text" name="agent-name" id="agent-name" class="ff-input">
+                    <input type="hidden" name="agent-uid" id="agent-uid">
                 </div>
             </div>
 

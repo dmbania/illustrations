@@ -17,13 +17,25 @@ export class AgentProfileManager {
     }
 
     addAgent(agent) {
-        this.agents.push(agent)
+
+        console.log(agent['agent-uid'])
+
+        let UID = Symbol()
+
+        // this.agents.push(agent)
+        this.agents[UID] + agent
 
         try {
             this.agentStorage.setItem('agents', JSON.stringify(this.agents))
         } catch (err) {
             console.error(err)
         }
+
+        return UID
+    }
+
+    saveAgent(agent) {
+        return this.addAgent(agent)
     }
 
     clear() {
