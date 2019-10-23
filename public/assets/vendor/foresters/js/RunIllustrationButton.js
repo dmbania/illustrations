@@ -1,22 +1,13 @@
-'use strict';
+import { DataStreamProxy } from '/assets/vendor/foresters/js/DataStreamProxy.js';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.RunIllustrationButton = undefined;
+export class RunIllustrationButton {
+  constructor(runButton, illInputForm) {
+    runButton.addEventListener('click', evt => {
+      const formData = new FormData(illInputForm);
+      const dataProxy = new DataStreamProxy(formData);
 
-var _DataStreamProxy = require('/assets/vendor/foresters/js/DataStreamProxy.js');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RunIllustrationButton = exports.RunIllustrationButton = function RunIllustrationButton(runButton, illInputForm) {
-  _classCallCheck(this, RunIllustrationButton);
-
-  runButton.addEventListener('click', function (evt) {
-    var formData = new FormData(illInputForm);
-    var dataProxy = new _DataStreamProxy.DataStreamProxy(formData);
-
-    dataProxy.generatePdf();
-    evt.preventDefault();
-  });
-};
+      dataProxy.generatePdf();
+      evt.preventDefault();
+    });
+  }
+}

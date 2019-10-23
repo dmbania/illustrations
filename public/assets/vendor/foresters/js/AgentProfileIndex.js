@@ -1,13 +1,10 @@
-'use strict';
+import { AgentProfile } from '/assets/vendor/foresters/js/AgentProfile.js';
+import { AgentProfileManager } from '/assets/vendor/foresters/js/AgentProfileManager.js';
 
-var _AgentProfile = require('/assets/vendor/foresters/js/AgentProfile.js');
-
-var _AgentProfileManager = require('/assets/vendor/foresters/js/AgentProfileManager.js');
-
-var agentStorage = window.localStorage;
-var APM = new _AgentProfileManager.AgentProfileManager(agentStorage);
-var profile_form = document.querySelector('.agent-profile-form');
+const agentStorage = window.localStorage;
+const APM = new AgentProfileManager(agentStorage);
+const profile_form = document.querySelector('.agent-profile-form');
 
 APM.showAgents();
 
-var agentProfile = new _AgentProfile.AgentProfile(APM, profile_form);
+const agentProfile = new AgentProfile(APM, profile_form);

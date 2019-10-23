@@ -1,20 +1,8 @@
-'use strict';
+export class FormUpdater {
+  constructor(form, data) {
+    for (const field in data) {
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var FormUpdater = exports.FormUpdater = function () {
-  function FormUpdater(form, data) {
-    _classCallCheck(this, FormUpdater);
-
-    for (var field in data) {
-
-      var updating_field = form.querySelector('[name=' + field + ']') || null;
+      const updating_field = form.querySelector('[name=' + field + ']') || null;
 
       if (!updating_field) continue;
 
@@ -36,52 +24,42 @@ var FormUpdater = exports.FormUpdater = function () {
     }
   }
 
-  _createClass(FormUpdater, [{
-    key: 'updateInput',
-    value: function updateInput(input_field) {
-      switch (input_field.getAttribute('type')) {
-        case 'text':
-          this.updateText(input_field);
-          break;
-        case 'number':
-          this.updateNumber(input_field);
-          break;
-        case 'radio':
-          this.updateRadio(input_field);
-          break;
-        case 'checkbox':
-          this.updateCheckbox(input_field);
-          break;
-      }
+  updateInput(input_field) {
+    switch (input_field.getAttribute('type')) {
+      case 'text':
+        this.updateText(input_field);
+        break;
+      case 'number':
+        this.updateNumber(input_field);
+        break;
+      case 'radio':
+        this.updateRadio(input_field);
+        break;
+      case 'checkbox':
+        this.updateCheckbox(input_field);
+        break;
+    }
 
-      // console.log(input_field.getAttribute('type'))
-    }
-  }, {
-    key: 'updateText',
-    value: function updateText(input_field) {
-      // this.doSomething()
-    }
-  }, {
-    key: 'updateNumber',
-    value: function updateNumber(input_field) {
-      // this.doSomething()
-    }
-  }, {
-    key: 'updateRadio',
-    value: function updateRadio(input_field) {
-      // this.doSomething()
-    }
-  }, {
-    key: 'updateCheckbox',
-    value: function updateCheckbox(input_field) {
-      // this.doSomething()
-    }
-  }, {
-    key: 'updateDropDown',
-    value: function updateDropDown(input_field) {
-      // this.doSomething()
-    }
-  }]);
+    // console.log(input_field.getAttribute('type'))
+  }
 
-  return FormUpdater;
-}();
+  updateText(input_field) {
+    // this.doSomething()
+  }
+
+  updateNumber(input_field) {
+    // this.doSomething()
+  }
+
+  updateRadio(input_field) {
+    // this.doSomething()
+  }
+
+  updateCheckbox(input_field) {
+    // this.doSomething()
+  }
+
+  updateDropDown(input_field) {
+    // this.doSomething()
+  }
+}
