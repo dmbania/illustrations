@@ -1,3 +1,5 @@
+{% set state_name = "client-state" %}
+
 <section class="ff-form-group">
     <div class="ff-row">
         <h2 class="ff-col" id="customer-info">1. Client Info</h2>
@@ -5,8 +7,8 @@
 
     <div class="ff-row">
         <div class="ff-col-1of2">
-            <label class="ff-label">Client Name</label>
-            <input type="text" name="name" class="ff-input">
+            <label class="ff-label" for="client-name">Client Name</label>
+            <input type="text" name="client-name" id="client-name" class="ff-input">
         </div>
 
         <div class="ff-col-1of2">
@@ -23,8 +25,8 @@
         </div>
 
         <div class="ff-col-1of2">
-            <label class="ff-label">Issue Age</label>
-            <input type="number" class="ff-input" name="age" min="0" max="80" value="" placeholder="35">
+            <label class="ff-label" for="client-age">Issue Age</label>
+            <input type="number" class="ff-input" name="client-age" id="client-age" min="0" max="80" value="" placeholder="35" >
         </div>
     </div>
 </section>
