@@ -6,7 +6,7 @@ export class AgentProfileManager {
 
     readAllAgents() {
         try {
-            this.agents = JSON.parse(this.agentStorage.getItem('agents')) || [];
+            this.agents = JSON.parse(this.agentStorage.getItem('agents')) || {};
         } catch (err) {
             console.error(err);
         }
@@ -18,12 +18,11 @@ export class AgentProfileManager {
 
     addAgent(agent) {
 
-        console.log(agent['agent-uid']);
+        agent = this.addAgentId(agent);
 
-        let UID = Symbol();
+        this.agents[agent['agent-uid']] = agent;
 
-        // this.agents.push(agent)
-        this.agents[UID] + agent;
+        // console.log(this.agents)
 
         try {
             this.agentStorage.setItem('agents', JSON.stringify(this.agents));
@@ -31,7 +30,13 @@ export class AgentProfileManager {
             console.error(err);
         }
 
-        return UID;
+        return agent['agent-uid'];
+    }
+
+    addAgentId(agent) {
+        agent['agent-uid'] = agent['agent-name'].toUpperCase().replace(/ /g, '-');
+        console.log(agent['agent-uid']);
+        return agent;
     }
 
     saveAgent(agent) {

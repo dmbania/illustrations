@@ -4,4 +4,42 @@ const agentStorage = window.localStorage;
 const APM = new AgentProfileManager(agentStorage);
 const profile_form = document.querySelector('.agent-profile-form');
 
-const agentProfile = new AgentProfile(APM, profile_form);
+APM.showAgents();
+
+let agent2 = {
+    "agent-name": "agent One",
+    "agent-title": "Agent Suprem",
+    "agent-company": "Foresters Financial",
+    "agent-state": "NJ",
+    "agent-website": ""
+};
+
+APM.saveAgent({
+    "agent-name": "agent One",
+    "agent-title": "Agent Suprem",
+    "agent-company": "Foresters Financial",
+    "agent-state": "NJ",
+    "agent-website": ""
+});
+
+APM.saveAgent({
+    "agent-name": "agent Three",
+    "agent-title": "Agent Supreme",
+    "agent-company": "Foresters Financial",
+    "agent-state": "NJ",
+    "agent-website": ""
+});
+
+APM.showAgents();
+
+APM.saveAgent({
+    "agent-name": "Agent One",
+    "agent-title": "Agent Supreme",
+    "agent-company": "Foresters Financial",
+    "agent-state": "NJ",
+    "agent-website": ""
+});
+
+APM.showAgents();
+
+// APM.clear()
