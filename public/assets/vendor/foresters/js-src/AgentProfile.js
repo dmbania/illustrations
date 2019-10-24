@@ -13,8 +13,8 @@ export class AgentProfile {
 
             let formData = new FormData(this.profileForm)
 
-            for(var pair of formData.entries()) {
-               this.profileData[pair[0]] = pair[1]
+            for (var pair of formData.entries()) {
+                this.profileData[pair[0]] = pair[1]
             }
 
             let profile_UID = this.APM.saveAgent(this.profileData)
