@@ -16,6 +16,14 @@ export class AgentProfileManager {
         return this.agents;
     }
 
+    getAgent(agentId) {
+        if (Object.keys(this.agents).includes(agentId)) {
+            return this.agents[agentId];
+        }
+
+        return undefined;
+    }
+
     showAgents() {
         console.log(this.agents);
     }
