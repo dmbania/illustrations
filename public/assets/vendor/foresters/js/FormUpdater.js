@@ -53,7 +53,7 @@ export class FormUpdater {
     }
 
     updateDropDown(input_field, input_value) {
-        // this.doSomething()
+        input_field.value = input_value;
     }
 
 }

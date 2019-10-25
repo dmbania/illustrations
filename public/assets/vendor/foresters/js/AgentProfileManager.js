@@ -29,7 +29,6 @@ export class AgentProfileManager {
     }
 
     addAgent(agent) {
-
         agent = this.addAgentId(agent);
 
         this.agents[agent['agent-uid']] = agent;
