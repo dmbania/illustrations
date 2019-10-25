@@ -1,7 +1,6 @@
 import { AgentProfileForm } from '/assets/vendor/foresters/js/AgentProfileForm.js'
 import { AgentProfileManager } from '/assets/vendor/foresters/js/AgentProfileManager.js'
 
-const agentForm = new AgentProfileForm()
 const agentStorage = window.localStorage;
 const APM = new AgentProfileManager(agentStorage)
 
@@ -11,5 +10,4 @@ let pathnames = url.pathname.split('/')
 const agent = APM.getAgent(pathnames.pop())
 const profile_form = document.querySelector('.agent-profile-form')
 
-
-new AgentProfileForm(agent, profile_form)
+new AgentProfileForm(agent, profile_form, APM)

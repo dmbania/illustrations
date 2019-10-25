@@ -1,9 +1,9 @@
 import { FormUpdater } from '/assets/vendor/foresters/js/FormUpdater.js'
 
 export class AgentProfileForm {
-
-    constructor(agent, form) {
+    constructor(agent, form, APM) {
         this.agent = agent
+        this.APM = APM
         this.form = form
 
         this.initForm()
@@ -11,19 +11,14 @@ export class AgentProfileForm {
 
     initForm() {
         new FormUpdater(this.form, this.agent)
-    }
 
-    initForm_OLD() {
-        this.profileForm.addEventListener('submit', evt => {
-
-            let formData = new FormData(this.profileForm)
-
+        this.form.addEventListener('submit', evt => {
+            let formData = new FormData(this.form)
             for (var pair of formData.entries()) {
-                this.profileData[pair[0]] = pair[1]
+                this.agent[pair[0]] = pair[1]
             }
 
-            let profile_UID = this.APM.saveAgent(this.profileData)
-
+            this.APM.saveAgent(this.agent)
             evt.preventDefault();
         });
     }
