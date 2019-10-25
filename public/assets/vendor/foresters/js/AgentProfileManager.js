@@ -12,6 +12,10 @@ export class AgentProfileManager {
         }
     }
 
+    getAgents() {
+        return this.agents;
+    }
+
     showAgents() {
         console.log(this.agents);
     }
