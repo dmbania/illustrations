@@ -25,8 +25,9 @@ export class AgentProfileTable {
             let newRow = document.createElement('tr');
             let agentInformation = `
                 <td><a href="/agent/profile/${agentId}">${oneAgent['agent-name']}</a></td>
-                <td>${oneAgent['agent-company']}</td>
-                <td>${oneAgent['agent-state']}</td>
+                <td>${oneAgent['agent-company'] || ''}</td>
+                <td>${oneAgent['agent-city'] || ''}</td>
+                <td>${oneAgent['agent-state'] || ''}</td>
             `;
             newRow.innerHTML = agentInformation;
 
