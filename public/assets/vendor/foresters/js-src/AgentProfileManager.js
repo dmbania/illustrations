@@ -30,10 +30,7 @@ export class AgentProfileManager {
 
     addAgent(agent) {
         agent = this.addAgentId(agent)
-
         this.agents[agent['agent-uid']] = agent
-
-        // console.log(this.agents)
 
         try {
             this.agentStorage.setItem('agents', JSON.stringify(this.agents))
@@ -44,10 +41,8 @@ export class AgentProfileManager {
         return agent['agent-uid']
     }
 
-
     addAgentId(agent) {
         agent['agent-uid'] = agent['agent-name'].toUpperCase().replace(/ /g, '-')
-        console.log(agent['agent-uid'])
         return agent
     }
 
