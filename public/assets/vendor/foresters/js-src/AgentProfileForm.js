@@ -2,24 +2,32 @@ import { FormUpdater } from '/assets/vendor/foresters/js/FormUpdater.js'
 
 export class AgentProfileForm {
     constructor(agent, form, APM) {
-        this.agent = agent
+        this.agent = agent || {}
         this.APM = APM
         this.form = form
+        this.formUpdater = new FormUpdater(form)
 
         this.initForm()
     }
 
     initForm() {
-        new FormUpdater(this.form, this.agent)
+        this.formUpdater.update(this.agent)
 
         window.document.querySelector('.save-form').addEventListener('click', evt => {
+            const formData = new FormData(this.form)
 
-            let formData = new FormData(this.form)
-            for (var pair of formData.entries()) {
-                this.agent[pair[0]] = pair[1]
+            if (formData.get('agent-name').trim().length) {
+                for (var pair of formData.entries()) {
+                    this.agent[pair[0]] = pair[1]
+                }
+
+                let uid = this.APM.saveAgent(this.agent)
+                this.agent['agent-uid'] = uid
+                this.formUpdater.update(this.agent)
+            } else {
+                console.log('name requried')
             }
 
-            this.APM.saveAgent(this.agent)
             evt.preventDefault();
         });
 

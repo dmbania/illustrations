@@ -1,9 +1,14 @@
 export class FormUpdater {
-    constructor(form, data) {
+    constructor(form) {
+        this.form = form;
+    }
+
+    update(data) {
         for (const field in data) {
-            const updating_field = form.querySelector('[name=' + field + ']') || null;
+            const updating_field = this.form.querySelector('[name=' + field + ']') || null;
 
             if (!updating_field) continue;
+
             switch (updating_field.tagName) {
                 case 'INPUT':
                     this.updateInput(updating_field, data[field]);
