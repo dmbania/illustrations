@@ -3,8 +3,8 @@ import { AgentProfileTable } from '/assets/vendor/foresters/js/AgentProfileTable
 
 const agentStorage = window.localStorage;
 const APM = new AgentProfileManager(agentStorage);
-const agents = APM.getAgents();
-const agentTable = new AgentProfileTable(agents, document.querySelector('.agent-table'));
+const agentsMap = APM.getAgents();
+const agentTable = new AgentProfileTable(agentsMap, document.querySelector('.agent-table'));
 
 // APM.clear()
 // APM.showAgents()

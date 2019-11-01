@@ -14,24 +14,24 @@ export class AgentProfileTable {
     }
 
     showHideNoAgents() {
-        if (this.agents !== null) {
+        if (this.agents.size > 0) {
             this.noAgentMessage.classList.add('ff-hidden')
         }
     }
 
     buildTable() {
-        Object.keys(this.agents).forEach(agentId => {
+        for (const [agentId, agent] of this.agents) {
             let oneAgent = this.agents[agentId]
             let newRow = document.createElement('tr')
             let agentInformation = `
-                <td><a href="/agent/profile/${agentId}">${oneAgent['agent-name']}</a></td>
-                <td>${oneAgent['agent-company'] || ''}</td>
-                <td>${oneAgent['agent-city'] || ''}</td>
-                <td>${oneAgent['agent-state'] || ''}</td>
+                <td><a href="/agent/profile/${agentId}">${agent['agent-name']}</a></td>
+                <td>${agent['agent-company'] || ''}</td>
+                <td>${agent['agent-city'] || ''}</td>
+                <td>${agent['agent-state'] || ''}</td>
             `
             newRow.innerHTML = agentInformation
 
             this.tableBody.appendChild(newRow)
-        })
+        }
     }
 }
