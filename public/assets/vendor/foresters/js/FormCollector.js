@@ -2,7 +2,6 @@ export class FormCollector {
   constructor(form) {
     this.formJSON = '';
     this.serializeFormJSON(form);
-    console.log(this.formJSON);
   }
 
   serializeFormJSON(form) {
