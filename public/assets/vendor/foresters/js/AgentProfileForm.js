@@ -24,6 +24,7 @@ export class AgentProfileForm {
                 let uid = this.APM.saveAgent(this.agent);
                 this.agent['agent-uid'] = uid;
                 this.formUpdater.update(this.agent);
+                this.gotoIndex();
             } else {
                 console.log('name requried');
             }
@@ -32,9 +33,12 @@ export class AgentProfileForm {
         });
 
         document.querySelector('.cancel-form').addEventListener('click', evt => {
-            window.location.href = '/agents/';
-
+            this.gotoIndex();
             evt.preventDefault();
         });
+    }
+
+    gotoIndex() {
+        window.location.href = '/agents/';
     }
 }
