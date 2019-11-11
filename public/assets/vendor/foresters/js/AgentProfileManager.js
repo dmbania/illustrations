@@ -3,6 +3,7 @@ export class AgentProfileManager {
         this.agentStorage = agentStorage;
         this.agentsMap = new Map();
         this.readAllAgents();
+        this.getSelectedAgent();
     }
 
     readAllAgents() {
@@ -21,6 +22,24 @@ export class AgentProfileManager {
         } catch (err) {
             console.error(err);
         }
+    }
+
+    getSelectedAgent() {
+        // let selectedAgent = []
+
+        // try {
+        //     let agentsFromJson = JSON.parse(this.agentStorage.getItem('agents'))
+
+        //     if (agentsFromJson) {
+        //         agentsObj = agentsFromJson['agents'] || []
+        //     }
+
+        //     for (var i = agentsObj.length - 1; i >= 0; i--) {
+        //         this.agentsMap.set(agentsObj[i]["agent-uid"], agentsObj[i])
+        //     }
+        // } catch (err) {
+        //     console.error(err)
+        // }
     }
 
     getAgents() {
@@ -48,12 +67,16 @@ export class AgentProfileManager {
         this.agentsMap.set(agent['agent-uid'], agent);
 
         try {
-            this.agentStorage.setItem('agents', JSON.stringify(this.mapToJson()));
+            this.saveAgents();
         } catch (err) {
             console.error(err);
         }
 
         return agent['agent-uid'];
+    }
+
+    saveAgents() {
+        this.agentStorage.setItem('agents', JSON.stringify(this.mapToJson()));
     }
 
     mapToJson() {
@@ -80,6 +103,17 @@ export class AgentProfileManager {
 
     saveAgent(agent) {
         return this.addAgent(agent);
+    }
+
+    removeAgent(agentId, callback) {
+        this.agentsMap.delete(agentId);
+        this.saveAgents();
+        callback();
+    }
+
+    selectAgent(agentId) {
+
+        return this.getSelectedAgent();
     }
 
     clear() {

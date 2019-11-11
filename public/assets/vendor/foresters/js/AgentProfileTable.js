@@ -24,10 +24,13 @@ export class AgentProfileTable {
             let oneAgent = this.agents[agentId];
             let newRow = document.createElement('tr');
             let agentInformation = `
+                <td><a data-agent-uid="${agentId}" class="select-agent ff-button">Select</a></td>
                 <td><a href="/agent/profile/${agentId}">${agent['agent-name']}</a></td>
                 <td>${agent['agent-company'] || ''}</td>
                 <td>${agent['agent-city'] || ''}</td>
                 <td>${agent['agent-state'] || ''}</td>
+                <td><a data-agent-uid="${agentId}" class="delete-agent ff-button">Delete</a></td>
+
             `;
             newRow.innerHTML = agentInformation;
 
