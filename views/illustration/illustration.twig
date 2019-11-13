@@ -7,6 +7,7 @@
 {% block title null %}
 
 {% block scripts %}
+    {{ parent() }}
 
     {{ html.script('/assets/vendor/foresters/js/FliacIndex.js', true) }}
 {% endblock %}

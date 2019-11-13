@@ -5,6 +5,7 @@
 {% block title 'Agent Profile' %}
 
 {% block scripts %}
+    {{ parent() }}
 
     {{ html.script('/assets/vendor/foresters/js/AgentProfileIndex.js', true) }}
 {% endblock %}

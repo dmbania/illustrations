@@ -24,24 +24,6 @@ export class AgentProfileManager {
         }
     }
 
-    getSelectedAgent() {
-        // let selectedAgent = []
-
-        // try {
-        //     let agentsFromJson = JSON.parse(this.agentStorage.getItem('agents'))
-
-        //     if (agentsFromJson) {
-        //         agentsObj = agentsFromJson['agents'] || []
-        //     }
-
-        //     for (var i = agentsObj.length - 1; i >= 0; i--) {
-        //         this.agentsMap.set(agentsObj[i]["agent-uid"], agentsObj[i])
-        //     }
-        // } catch (err) {
-        //     console.error(err)
-        // }
-    }
-
     getAgents() {
         return this.agentsMap
     }
@@ -52,6 +34,31 @@ export class AgentProfileManager {
         }
 
         return {}
+    }
+
+    setSelectedAgent(agentId) {
+
+        let selectedAgent = this.getAgent(agentId)
+
+        try {
+            this.agentStorage.setItem('selected-agent', JSON.stringify(selectedAgent))
+
+            return selectedAgent;
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
+    getSelectedAgent() {
+        let selectedAgent = null
+
+        try {
+            selectedAgent = JSON.parse(this.agentStorage.getItem('selected-agent'))
+        } catch (err) {
+            console.error(err)
+        }
+
+        return selectedAgent
     }
 
     showAgents() {
@@ -109,12 +116,6 @@ export class AgentProfileManager {
         this.agentsMap.delete(agentId)
         this.saveAgents()
         callback()
-    }
-
-    selectAgent(agentId) {
-
-
-        return this.getSelectedAgent()
     }
 
     clear() {

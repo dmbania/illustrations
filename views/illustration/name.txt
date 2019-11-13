@@ -1,0 +1,66 @@
+1-client-info.twig:9:            <input type="text" name="name" class="ff-input">
+1-client-info.twig:14:            <input type="radio" class="" name="client-gender" id="client-gender-m" value="M"> <label class="ff-label" for="client-gender-m">Male</label>
+1-client-info.twig:15:            <input type="radio" class="" name="client-gender" id="client-gender-f" value="F"> <label class="ff-label" for="client-gender-f">Female</label>
+1-client-info.twig:22:            <select name="state" class="ff-input">
+1-client-info.twig:79:            <input type="number" class="ff-input" name="age" min="0" max="80" value="" placeholder="35">
+
+2-policy-info-isp3.twig:8:            <label class="ff-label">Face Amount <input type="radio" name="face-amount-or-premium" value="F"></label>
+2-policy-info-isp3.twig:9:            <input type="text" name="face-amount" class="ff-input" placeholder="50,000">
+2-policy-info-isp3.twig:13:            <label class="ff-label">Premium <input type="radio" name="face-amount-or-premium" value="P"></label>
+2-policy-info-isp3.twig:14:            <input type="text" name="premium-amount" class="ff-input" placeholder="1,486">
+2-policy-info-isp3.twig:21:            <select name="premium-mode" class="ff-input">
+2-policy-info-isp3.twig:31:            <input type="text" name="fixed-account-percent" class="ff-input" placeholder="0">
+2-policy-info-isp3.twig:38:            <select name="premium-mode" class="ff-input">
+2-policy-info-isp3.twig:48:            <select name="sub-standard-rating" class="ff-input">
+2-policy-info-iswl.twig:8:            <label class="ff-label">Face Amount <input type="radio" name="face-amount-or-premium" value="F"></label>
+2-policy-info-iswl.twig:9:            <input type="text" name="face-amount" class="ff-input" placeholder="50,000">
+2-policy-info-iswl.twig:13:            <label class="ff-label">Annual Premium <input type="radio" name="face-amount-or-premium" value="P"></label>
+2-policy-info-iswl.twig:14:            <input type="text" name="premium-amount" class="ff-input" placeholder="1,486">
+2-policy-info-iswl.twig:21:            <select name="premium-mode" class="ff-input">
+2-policy-info-iswl.twig:31:            <select name="sub-standard-rating" class="ff-input">
+2-policy-info-iswl.twig:51:                <input type="checkbox" name="suspend-premium">
+2-policy-info-iswl.twig:58:            <input type="radio" class="" name="tobacco-use" id="tottle-tobacco-y" value="Y"> <label class="ff-label" for="tottle-tobacco-y">Tobacco</label>
+2-policy-info-iswl.twig:59:            <input type="radio" class="" name="tobacco-use" id="tottle-tobacco-n" value="N"> <label class="ff-label" for="tottle-tobacco-n">Non-Tobacco</label>
+
+3-riders-benefits-isp3.twig:9:                <input type="checkbox" name="accidental-death-benefit">
+3-riders-benefits-isp3.twig:18:            <input type="text" name="accidental-death-benefit-face" class="ff-input ff-input--inline" placeholder="50,000.00">
+3-riders-benefits-isp3.twig:22:            <label class="ff-label"><input type="checkbox" name="adbFace">
+3-riders-benefits-isp3.twig:31:                <input type="checkbox" name="accidental-death-benefit">
+3-riders-benefits-isp3.twig:40:                <input type="checkbox" name="insureds-term-rider">
+3-riders-benefits-isp3.twig:49:            <select name="insureds-term-rider-years" class="ff-input ff-input--inline">
+3-riders-benefits-isp3.twig:58:            <input type="text" name="insureds-term-rider-face" class="ff-input ff-input--inline" placeholder="200,00">
+3-riders-benefits-isp3.twig:63:            <select name="insureds-term-rider-face-multiple" class="ff-input ff-input--inline">
+3-riders-benefits-isp3.twig:77:                <input type="checkbox" name="spouses-term-rider">
+3-riders-benefits-isp3.twig:86:            <input type="number" name="spouses-term-rider-face" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
+3-riders-benefits-isp3.twig:91:            <input type="text" name="spouses-term-rider-face" class="ff-input ff-input--inline" placeholder="200,000">
+3-riders-benefits-isp3.twig:96:            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+3-riders-benefits-isp3.twig:97:            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+3-riders-benefits-isp3.twig:102:            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+3-riders-benefits-isp3.twig:103:            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+3-riders-benefits-isp3.twig:110:                <input type="checkbox" name="childs-term-rider">
+3-riders-benefits-isp3.twig:119:            <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
+3-riders-benefits-isp3.twig:126:                <input type="checkbox" name="guardian-insurability-rider">
+3-riders-benefits-isp3.twig:135:            <input type="text" name="guardian-insurability-rider-face" class="ff-input ff-input--inline" placeholder="25,000">
+
+3-riders-iswl.twig:9:                <input type="checkbox" name="accidental-death-benefit">
+3-riders-iswl.twig:19:            <select name="" class="ff-input ff-input--inline">
+3-riders-iswl.twig:32:                <input type="checkbox" name="accidental-death-benefit">
+3-riders-iswl.twig:41:            <label class="ff-label"><input type="radio" name="waiver-premium-years" value="10"> 10</label>
+3-riders-iswl.twig:42:            <label class="ff-label"><input type="radio" name="waiver-premium-years" value="20"> 20</label>
+3-riders-iswl.twig:47:            <input type="text" name="insureds-term-rider-face" class="ff-input ff-input--inline" placeholder="200,00">
+3-riders-iswl.twig:52:            <select name="insureds-term-rider-face-multiple" class="ff-input ff-input--inline">
+3-riders-iswl.twig:66:                <input type="checkbox" name="spouses-term-rider">
+3-riders-iswl.twig:75:            <input type="number" name="spouses-term-rider-face" min="16" max="80" class="ff-input ff-input--inline" placeholder="35">
+3-riders-iswl.twig:80:            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="M"> Male</label>
+3-riders-iswl.twig:81:            <label class="ff-label"><input type="radio" name="spouses-term-rider-gender" value="F"> Female</label>
+3-riders-iswl.twig:86:            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="N"> Non-Tobacco</label>
+3-riders-iswl.twig:87:            <label class="ff-label"><input type="radio" name="spouses-term-rider-tobacco" value="Y"> Tobacco</label>
+3-riders-iswl.twig:94:                <input type="checkbox" name="childs-term-rider">
+3-riders-iswl.twig:103:            <input type="number" name="childs-term-rider-units" class="ff-input ff-input--inline" min="0" max="10" placeholder="0">
+
+4-loan.twig:9:                <input type="checkbox" name="loan" value="Y" class="loan-checkbox">
+4-loan.twig:30:                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+4-loan.twig:35:                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+4-loan.twig:40:                        <td><input type="text" name="" value="$0.00" class="ff-input"></td>
+
+illustration.twig:43:                    <select name="product" class="ff-input ff-input--inline select-product">
