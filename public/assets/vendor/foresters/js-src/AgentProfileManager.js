@@ -112,10 +112,10 @@ export class AgentProfileManager {
         return this.addAgent(agent)
     }
 
-    removeAgent(agentId, callback) {
+    removeAgent(agentId, evt) {
         this.agentsMap.delete(agentId)
         this.saveAgents()
-        callback()
+        evt.target.parentNode.parentNode.remove()
     }
 
     clear() {

@@ -16,7 +16,7 @@ document.querySelector('.agent-table').addEventListener('click', evt => {
     if (evt.target.classList.contains("delete-agent")) {
         let agentId = evt.target.getAttribute("data-agent-uid")
 
-        APM.removeAgent(agentId, evt => evt.target.parentNode.parentNode.remove())
+        APM.removeAgent(agentId, evt)
 
         evt.preventDefault();
     }
@@ -32,5 +32,4 @@ document.querySelector('.agent-table').addEventListener('click', evt => {
 
         evt.preventDefault();
     }
-
 })
