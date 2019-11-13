@@ -12,31 +12,6 @@ const add_button = document.querySelector('.add-agent-button').addEventListener(
     evt.preventDefault();
 });
 
-// const RemoveAgentData = new Promise(
-//     (resolve, reject) => {
-
-//         try {
-
-//         } catch (e) {
-
-//         }
-
-//         if (isMomHappy) {
-//             const phone = {
-//                 brand: 'Samsung',
-//                 color: 'black'
-//             };
-
-//             resolve(phone);
-
-//         } else {
-//             const reason = new Error('mom is not happy');
-//             reject(reason);
-//         }
-//     }
-// );
-
-
 document.querySelector('.agent-table').addEventListener('click', evt => {
     if (evt.target.classList.contains("delete-agent")) {
         let agentId = evt.target.getAttribute("data-agent-uid");
@@ -49,9 +24,10 @@ document.querySelector('.agent-table').addEventListener('click', evt => {
     if (evt.target.classList.contains("select-agent")) {
         let agentId = evt.target.getAttribute("data-agent-uid");
         let selectedAgent = APM.setSelectedAgent(agentId);
-        const agentDisplay = document.querySelector('.selected-agent-display');
 
+        const agentDisplay = document.querySelector('.selected-agent-display');
         const sa = new SelectedAgent(APM, agentDisplay);
+
         sa.display();
 
         evt.preventDefault();
