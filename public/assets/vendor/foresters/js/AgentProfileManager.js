@@ -37,16 +37,24 @@ export class AgentProfileManager {
     }
 
     setSelectedAgent(agentId) {
-
-        let selectedAgent = this.getAgent(agentId);
+        let selectedAgent = this.getAgent(agentId) || null;
 
         try {
-            this.agentStorage.setItem('selected-agent', JSON.stringify(selectedAgent));
+
+            if (selectedAgent) {
+                this.agentStorage.setItem('selected-agent', JSON.stringify(selectedAgent));
+            } else {
+                this.agentStorage.setItem('selected-agent', JSON.stringify({}));
+            }
 
             return selectedAgent;
         } catch (err) {
             console.error(err);
         }
+    }
+
+    removeSelectedAgent() {
+        this.setSelectedAgent({});
     }
 
     getSelectedAgent() {
@@ -115,6 +123,11 @@ export class AgentProfileManager {
     removeAgent(agentId, evt) {
         this.agentsMap.delete(agentId);
         this.saveAgents();
+
+        if (agentId == this.getSelectedAgent()['agent-uid']) {
+            this.removeSelectedAgent();
+        }
+
         evt.target.parentNode.parentNode.remove();
     }
 
