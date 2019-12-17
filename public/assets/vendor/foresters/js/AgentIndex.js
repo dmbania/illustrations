@@ -20,7 +20,6 @@ document.querySelector('.agent-table').addEventListener('click', evt => {
         let agentId = evt.target.getAttribute("data-agent-uid");
         APM.removeAgent(agentId, evt);
         sa.display();
-
         evt.preventDefault();
     }
 
