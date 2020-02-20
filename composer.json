@@ -16,7 +16,7 @@
         "guzzlehttp/guzzle": "^6.2",
         "illuminate/support": "^6.16",
         "josegonzalez/dotenv": "^3.1",
-        "monolog/monolog": "^1.22",
+        "monolog/monolog": "^2.0",
         "myclabs/php-enum": "^1.5",
         "php-di/php-di": "^6.0",
         "php-di/slim-bridge": "^2.0",
